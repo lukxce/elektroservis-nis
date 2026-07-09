@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     settings.seoUsluge?.title ?? `Usluge električara u ${settings.city}u`;
   const description =
     settings.seoUsluge?.description ??
-    `Sve o montaži, servisu, popravci i dijagnostici električnih instalacija koje nudi ${settings.title} u ${settings.city}u.`;
+    `Elektroinstalacije, rasveta, osigurači, utičnice, servis uređaja i klima koje nudi ${settings.title} u ${settings.city}u.`;
 
   return {
     title,

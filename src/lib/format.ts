@@ -11,10 +11,13 @@ export function formatDate(dateString: string): string {
 }
 
 const categoryLabels: Record<string, string> = {
-  montaza: "Montaža",
-  servis: "Servis i održavanje",
-  popravka: "Popravka kvarova",
-  dijagnostika: "Dijagnostika i merenje",
+  elektroinstalacije: "Elektroinstalacije",
+  rasveta: "Ugradnja rasvete",
+  "osiguraci-i-table": "Osigurači i table",
+  "uticnice-i-prekidaci": "Utičnice i prekidači",
+  "servis-uredjaja": "Servis kućnih uređaja",
+  "klima-uredjaji": "Ugradnja i servis klima uređaja",
+  "ev-punjaci": "Ugradnja EV punjača",
 };
 
 export function serviceCategoryLabel(category: string): string {

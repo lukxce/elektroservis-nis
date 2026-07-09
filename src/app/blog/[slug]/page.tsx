@@ -12,10 +12,13 @@ import { blogCategoryLabel, formatDate } from "@/lib/format";
 import { SITE_URL } from "@/lib/site-config";
 
 const serviceLinks = [
-  { href: "/usluge/montaza", label: "Montaža instalacija" },
-  { href: "/usluge/servis", label: "Servis i održavanje" },
-  { href: "/usluge/popravka", label: "Popravka kvarova" },
-  { href: "/usluge/dijagnostika", label: "Dijagnostika i merenje" },
+  { href: "/usluge/elektroinstalacije", label: "Elektroinstalacije" },
+  { href: "/usluge/rasveta", label: "Ugradnja rasvete" },
+  { href: "/usluge/osiguraci-i-table", label: "Osigurači i table" },
+  { href: "/usluge/uticnice-i-prekidaci", label: "Utičnice i prekidači" },
+  { href: "/usluge/servis-uredjaja", label: "Servis kućnih uređaja" },
+  { href: "/usluge/klima-uredjaji", label: "Ugradnja i servis klima uređaja" },
+  { href: "/usluge/ev-punjaci", label: "Ugradnja EV punjača" },
 ];
 
 export async function generateStaticParams() {

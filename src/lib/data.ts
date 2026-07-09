@@ -65,7 +65,7 @@ function mapService(raw: any): Service {
   return {
     slug: typeof raw.slug === "string" ? raw.slug : raw.slug?.current,
     title: raw.title,
-    category: raw.category ?? "montaza",
+    category: raw.category ?? "elektroinstalacije",
     subgroup: raw.subgroup,
     shortDescription: raw.shortDescription ?? "",
     priceFrom: raw.priceFrom,

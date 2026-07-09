@@ -24,10 +24,13 @@ export const service = defineType({
       type: 'string',
       options: {
         list: [
-          {title: 'Montaža', value: 'montaza'},
-          {title: 'Servis i održavanje', value: 'servis'},
-          {title: 'Popravka kvarova', value: 'popravka'},
-          {title: 'Dijagnostika i merenje', value: 'dijagnostika'},
+          {title: 'Elektroinstalacije', value: 'elektroinstalacije'},
+          {title: 'Ugradnja rasvete', value: 'rasveta'},
+          {title: 'Osigurači i table', value: 'osiguraci-i-table'},
+          {title: 'Utičnice i prekidači', value: 'uticnice-i-prekidaci'},
+          {title: 'Servis kućnih uređaja', value: 'servis-uredjaja'},
+          {title: 'Ugradnja i servis klima uređaja', value: 'klima-uredjaji'},
+          {title: 'Ugradnja EV punjača', value: 'ev-punjaci'},
         ],
       },
     }),

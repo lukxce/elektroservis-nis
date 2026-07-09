@@ -63,11 +63,12 @@ export default async function HomePage() {
               Dostupni danas u {settings.city}u
             </span>
             <h1 className="mt-5 text-4xl font-bold leading-[1.1] text-navy sm:text-6xl">
-              Montaža, servis i{" "}
               <span className="bg-gradient-to-r from-accent to-amber-500 bg-clip-text text-transparent">
-                popravka
-              </span>{" "}
-              električnih instalacija u {settings.city}u
+                Električar {settings.city}
+              </span>
+              <span className="mt-3 block text-xl font-semibold text-navy/70 sm:text-2xl">
+                Elektroinstalacije, rasveta, servis uređaja i hitne intervencije
+              </span>
             </h1>
             <p className="mt-5 max-w-md text-lg text-muted">
               Brz izlazak na teren, transparentne cene i {experienceYears ? `preko ${experienceYears} godina` : "dugogodišnje"} iskustva sa instalacijama u stanovima, kućama i poslovnom prostoru.
@@ -171,8 +172,8 @@ export default async function HomePage() {
               </span>
               <h2 className="mt-2 text-3xl font-bold text-navy sm:text-4xl">Najtraženije usluge</h2>
             </div>
-            <Link href="/cenovnik" className="hidden text-sm font-semibold text-accent-dark hover:underline sm:block">
-              Kompletan cenovnik →
+            <Link href="/usluge" className="hidden text-sm font-semibold text-accent-dark hover:underline sm:block">
+              Sve usluge →
             </Link>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -292,7 +293,7 @@ export default async function HomePage() {
                 </div>
               )}
               <div>
-                <dd className="text-3xl font-bold text-accent sm:text-4xl">4</dd>
+                <dd className="text-3xl font-bold text-accent sm:text-4xl">7</dd>
                 <dt className="mt-1 text-xs text-white/50">oblasti usluga</dt>
               </div>
               <div>
@@ -328,7 +329,7 @@ export default async function HomePage() {
               href: "/cenovnik",
               eyebrow: "Cenovnik",
               title: "Proverite cene usluga",
-              text: "Montaža, servis, popravka i dijagnostika prikazani pregledno po kategorijama.",
+              text: "Elektroinstalacije, rasveta, osigurači, utičnice, servis uređaja i klime, po kategorijama.",
               icon: (
                 <path d="M9 7h6m-6 4h6m-6 4h3M5 3h14a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
               ),

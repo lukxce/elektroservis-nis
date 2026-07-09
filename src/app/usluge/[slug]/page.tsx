@@ -62,18 +62,6 @@ export default async function UslugaDetailPage(
 
   const relatedServices = allServices.filter((s) => s.category === page.slug);
 
-  // Grupiši povezane usluge po podgrupi radi guste, preglednije prezentacije.
-  const subgroups: { name: string; items: typeof relatedServices }[] = [];
-  for (const service of relatedServices) {
-    const key = service.subgroup ?? "Ostalo";
-    let group = subgroups.find((g) => g.name === key);
-    if (!group) {
-      group = { name: key, items: [] };
-      subgroups.push(group);
-    }
-    group.items.push(service);
-  }
-
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -126,7 +114,7 @@ export default async function UslugaDetailPage(
         }
       />
 
-      {/* Checklist */}
+      {/* Checklist — kompaktne pilule umesto naslov+opis mreže */}
       {page.checklist.length > 0 && (
         <section className="py-14">
           <Container>
@@ -134,12 +122,17 @@ export default async function UslugaDetailPage(
               Šta uključuje
             </span>
             <h2 className="mt-2 text-3xl font-bold text-navy">{page.title}</h2>
-            <div className="mt-8 grid grid-cols-1 gap-x-12 gap-y-6 sm:grid-cols-2">
+            <div className="mt-6 flex flex-wrap gap-3">
               {page.checklist.map((item, i) => (
-                <div key={i} className="border-b border-black/10 pb-6">
-                  <h3 className="font-semibold text-navy">{item.title}</h3>
-                  <p className="mt-1 text-sm text-muted">{item.description}</p>
-                </div>
+                <span
+                  key={i}
+                  className="flex items-center gap-2 rounded-full border border-black/10 bg-surface px-4 py-2 text-xs font-bold uppercase tracking-wide text-navy"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 shrink-0 text-accent-dark">
+                    <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                  </svg>
+                  {item.title}
+                </span>
               ))}
             </div>
           </Container>
@@ -249,7 +242,7 @@ export default async function UslugaDetailPage(
       )}
 
       {/* Pricing — grupisano po podgrupama, gušći prikaz */}
-      {subgroups.length > 0 && (
+      {relatedServices.length > 0 && (
         <section className="py-14">
           <Container>
             <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
@@ -260,20 +253,9 @@ export default async function UslugaDetailPage(
               Cene su orijentacione. Za tačnu ponudu prilagođenu vašem prostoru
               pozovite {settings.phone}.
             </p>
-            <div className="mt-8 space-y-10">
-              {subgroups.map((group) => (
-                <div key={group.name}>
-                  <h3 className="flex items-center gap-2 text-base font-bold text-navy">
-                    <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                    {group.name}
-                    <span className="font-normal text-muted">({group.items.length})</span>
-                  </h3>
-                  <div className="mt-3 space-y-2">
-                    {group.items.map((service) => (
-                      <ServiceRow key={service.slug} service={service} />
-                    ))}
-                  </div>
-                </div>
+            <div className="mt-8 space-y-2">
+              {relatedServices.map((service) => (
+                <ServiceRow key={service.slug} service={service} />
               ))}
             </div>
             <Link

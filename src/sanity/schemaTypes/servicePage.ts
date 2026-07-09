@@ -19,7 +19,7 @@ export const servicePage = defineType({
       title: 'Slug (URL)',
       type: 'slug',
       description:
-        'Mora se poklapati sa kategorijom usluga: montaza, servis, popravka ili dijagnostika',
+        'Mora se poklapati sa kategorijom usluga: elektroinstalacije, rasveta, osiguraci-i-table, uticnice-i-prekidaci, servis-uredjaja, klima-uredjaji ili ev-punjaci',
       options: {source: 'title', maxLength: 96},
       validation: (Rule) => Rule.required(),
     }),
