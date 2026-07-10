@@ -114,27 +114,41 @@ export default async function UslugaDetailPage(
         }
       />
 
-      {/* Checklist — kompaktne pilule umesto naslov+opis mreže */}
-      {page.checklist.length > 0 && (
+      {/* Detaljan tekst */}
+      {page.body ? (
         <section className="py-14">
+          <Container className="max-w-3xl">
+            <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
+              Sve što treba da znate
+            </span>
+            <div className="mt-2">
+              <RichText value={page.body} />
+            </div>
+          </Container>
+        </section>
+      ) : null}
+
+      {/* Checklist */}
+      {page.checklist.length > 0 && (
+        <section className="bg-surface py-10">
           <Container>
             <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
               Šta uključuje
             </span>
-            <h2 className="mt-2 text-3xl font-bold text-navy">{page.title}</h2>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <h2 className="mt-2 text-2xl font-bold text-navy">{page.title}</h2>
+            <ul className="mt-5 grid grid-cols-1 gap-x-8 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-3">
               {page.checklist.map((item, i) => (
-                <span
+                <li
                   key={i}
-                  className="flex items-center gap-2 rounded-full border border-black/10 bg-surface px-4 py-2 text-xs font-bold uppercase tracking-wide text-navy"
+                  className="flex items-center gap-2 text-sm font-medium text-navy"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 shrink-0 text-accent-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 shrink-0 text-accent-dark">
                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                   </svg>
                   {item.title}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </Container>
         </section>
       )}
@@ -164,20 +178,6 @@ export default async function UslugaDetailPage(
           </Container>
         </section>
       )}
-
-      {/* Detaljan tekst */}
-      {page.body ? (
-        <section className="py-14">
-          <Container className="max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
-              Sve što treba da znate
-            </span>
-            <div className="mt-2">
-              <RichText value={page.body} />
-            </div>
-          </Container>
-        </section>
-      ) : null}
 
       {/* Why us */}
       {page.whyUs.length > 0 && (
