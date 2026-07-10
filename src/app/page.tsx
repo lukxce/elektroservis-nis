@@ -4,12 +4,11 @@ import Image from "next/image";
 
 import { Container } from "@/components/Container";
 import { PlaceholderImage } from "@/components/PlaceholderImage";
-import { ServiceCard } from "@/components/ServiceCard";
 import { BlogCard } from "@/components/BlogCard";
 import { ClosingCta } from "@/components/ClosingCta";
 import {
   getSiteSettings,
-  getFeaturedServices,
+  getServicePages,
   getBlogPosts,
 } from "@/lib/data";
 import { formatServiceAreas } from "@/lib/format";
@@ -29,9 +28,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const [settings, featuredServices, posts] = await Promise.all([
+  const [settings, servicePages, posts] = await Promise.all([
     getSiteSettings(),
-    getFeaturedServices(),
+    getServicePages(),
     getBlogPosts(),
   ]);
 
@@ -170,17 +169,29 @@ export default async function HomePage() {
                 <span className="h-px w-6 bg-accent" />
                 Usluge
               </span>
-              <h2 className="mt-2 text-3xl font-bold text-navy sm:text-4xl">Najtraženije usluge</h2>
+              <h2 className="mt-2 text-3xl font-bold text-navy sm:text-4xl">Oblasti usluga</h2>
             </div>
             <Link href="/usluge" className="hidden text-sm font-semibold text-accent-dark hover:underline sm:block">
               Sve usluge →
             </Link>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {featuredServices.map((service, i) => (
-              <div key={service.slug} className={i === 3 ? "hidden sm:block" : ""}>
-                <ServiceCard service={service} />
-              </div>
+            {servicePages.map((page) => (
+              <Link
+                key={page.slug}
+                href={`/usluge/${page.slug}`}
+                className="group flex flex-col rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
+              >
+                <h3 className="font-semibold text-navy group-hover:text-accent-dark">
+                  {page.title}
+                </h3>
+                {page.heroSubtitle && (
+                  <p className="mt-2 text-sm text-muted">{page.heroSubtitle}</p>
+                )}
+                <span className="mt-4 text-sm font-semibold text-accent-dark">
+                  Saznajte više →
+                </span>
+              </Link>
             ))}
           </div>
           <div className="mt-6 flex flex-col gap-3 sm:hidden">
