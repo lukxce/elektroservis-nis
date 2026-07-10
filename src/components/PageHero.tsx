@@ -85,7 +85,7 @@ export function PageHero({
 
       {stats && stats.length > 0 && (
         <Container className="relative z-10 pb-14 md:pb-20">
-          <div className="overflow-hidden rounded-2xl border border-black/5 bg-white text-navy shadow-lg sm:overflow-visible sm:rounded-none sm:border-none sm:bg-transparent sm:shadow-none sm:grid sm:grid-cols-3 sm:gap-4">
+          <div className={`overflow-hidden rounded-2xl border border-black/5 bg-white text-navy shadow-lg sm:overflow-visible sm:rounded-none sm:border-none sm:bg-transparent sm:shadow-none sm:grid sm:gap-4 ${stats.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
             {stats.map((stat, i) => (
               <div
                 key={stat.label}

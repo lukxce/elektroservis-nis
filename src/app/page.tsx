@@ -71,7 +71,7 @@ export default async function HomePage() {
               </span>
             </h1>
             <p className="mt-5 max-w-md text-lg text-muted">
-              Brz izlazak na teren, transparentne cene i {experienceYears ? `preko ${experienceYears} godina` : "dugogodišnje"} iskustva sa instalacijama u stanovima, kućama i poslovnom prostoru.
+              Brz izlazak na teren, transparentne cene i pažljiv pristup{experienceYears ? ` i preko ${experienceYears} godina iskustva` : ""} sa instalacijama u stanovima, kućama i poslovnom prostoru.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -272,18 +272,18 @@ export default async function HomePage() {
               O nama
             </span>
             <h2 className="mt-2 text-3xl font-bold">
-              Licencirani električar sa iskustvom na terenu
+              Stručan pristup svakoj instalaciji
             </h2>
             <p className="mt-4 text-white/70">
               {settings.title} pruža usluge montaže, servisa, popravke i
-              dijagnostike električnih instalacija {settings.foundedYear ? `od ${settings.foundedYear}. godine` : ""}.
+              dijagnostike električnih instalacija{settings.foundedYear ? ` od ${settings.foundedYear}. godine` : ""}.
               Pokrivamo: {formatServiceAreas(settings.city, settings.serviceAreas)}.
             </p>
             <p className="mt-3 text-white/70">
               Radimo po važećim tehničkim propisima, sa atestiranom opremom i
               pisanom dokumentacijom o merenjima.
             </p>
-            <dl className="mt-8 grid grid-cols-3 gap-4 border-y border-white/10 py-6">
+            <dl className={`mt-8 grid gap-4 border-y border-white/10 py-6 ${experienceYears !== undefined ? "grid-cols-3" : "grid-cols-2"}`}>
               {experienceYears !== undefined && (
                 <div>
                   <dd className="text-3xl font-bold text-accent sm:text-4xl">

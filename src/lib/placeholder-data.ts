@@ -32,9 +32,8 @@ export const siteSettings = {
   address: "Bulevar Nemanjića 44, Niš",
   city: "Niš",
   serviceAreas: ["Niš", "Niška Banja", "Medijana", "Pantelej", "Crveni Krst"],
-  foundedYear: 2011,
   workingHours: "Pon–Pet: 07–19h, Sub: 08–15h",
-  emergencyAvailability: "Hitne intervencije dostupne 0-24, svaki dan u nedelji",
+  emergencyAvailability: "Odgovaramo na hitne pozive u najkraćem mogućem roku",
   openingHoursSpecification: [
     {
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -50,10 +49,10 @@ export const siteSettings = {
   // Približne koordinate centra Niša: zameniti tačnom geo-lokacijom adrese firme.
   geo: { lat: 43.3209, lng: 21.8958 },
   trustBadges: [
-    "Licencirani električar",
+    "Uredna i temeljna izvedba",
     "Dolazak isti dan",
     "Garancija na rad",
-    "Hitne intervencije 0-24",
+    "Brz odziv na hitne pozive",
     "Atestirane instalacije",
   ],
 };
@@ -756,7 +755,7 @@ export const blogPosts: BlogPostItem[] = [
     title: "Pet znakova da je vaša instalacija zastarela i opasna",
     category: "bezbednost",
     excerpt:
-      "Ne mora da vas udari struja da biste znali da nešto nije u redu. Evo na šta obraćam pažnju kad procenjujem stanje starije instalacije.",
+      "Ne mora da vas udari struja da biste znali da nešto nije u redu. Evo na šta je vredno obratiti pažnju pri proceni stanja starije instalacije.",
     summary:
       "Miris paljevine, tople utičnice, treperenje svetla pri uključivanju uređaja i osigurači koji stalno ispadaju su znaci koje ne treba ignorisati. Aluminijumska instalacija starija od trideset pet do četrdeset godina posebno zaslužuje pažnju, jer se degradira tiho, bez upozorenja.",
     keyTakeaways: [
@@ -767,19 +766,19 @@ export const blogPosts: BlogPostItem[] = [
     ],
     publishedAt: "2026-02-14T09:00:00.000Z",
     body: [
-      p("Svaki put kad uđem u stan star tridesetak i više godina, prvo što uradim, i pre nego što me neko išta pita, jeste da otvorim razvodnu tablu i pogledam kako izgleda. Devedeset posto onoga što mi treba da znam o stanju instalacije vidim u prvih pet minuta, i evo šta tačno tražim, jer isto to možete i sami proveriti pre nego što me pozovete."),
+      p("Kod stana starijeg od tridesetak godina, stanje razvodne table u prvih nekoliko minuta pregleda otkriva veći deo onoga što treba znati o stanju cele instalacije. Evo šta se tačno proverava, i isto to možete sami pogledati pre nego što se pozove električar."),
       h2("Prvi znak: utičnice ili prekidači koji se greju"),
       p("Utičnica ili prekidač koji su primetno topli na dodir, čak i kad ništa jako ne troše, gotovo uvek znače da negde u kontaktu postoji otpor veći nego što bi trebalo, bilo zbog labavog spoja, bilo zbog oksidacije na aluminijumskom provodniku. Ovo nije nešto što treba čekati da se pogorša. Toplota na mestu spoja je energija koja se gubi, i vremenom, ta ista toplota može da otopi izolaciju oko provodnika i izazove kratak spoj."),
       h2("Drugi znak: treperenje svetla kad se uključi veći uređaj"),
-      p("Ako svetlo u kuhinji primetno zatreperi kad uključite mikrotalasnu ili veš mašinu, to je instalacija koja vam govori da je opterećena više nego što bi trebalo za tu liniju. Kod novije instalacije ovo se gotovo nikad ne dešava jer su strujni krugovi pravilno razdvojeni, dok kod starijih instalacija često nalazim da rasveta i utičnice dele isti vod, što nije bilo neuobičajeno pre nekoliko decenija, ali danas ne zadovoljava ni osnovne standarde bezbednosti."),
+      p("Ako svetlo u kuhinji primetno zatreperi kad uključite mikrotalasnu ili veš mašinu, to je instalacija koja vam govori da je opterećena više nego što bi trebalo za tu liniju. Kod novije instalacije ovo se gotovo nikad ne dešava jer su strujni krugovi pravilno razdvojeni, dok se kod starijih instalacija često nailazi na to da rasveta i utičnice dele isti vod, što nije bilo neuobičajeno pre nekoliko decenija, ali danas ne zadovoljava ni osnovne standarde bezbednosti."),
       h2("Treći znak: osigurači koji ispadaju bez očiglednog razloga"),
       p("Povremeno ispadanje osigurača kad uključite previše uređaja odjednom je normalno, to je osigurač koji radi svoj posao. Problem je kad osigurač ispada nasumično, bez jasnog obrasca, jer to obično znači da negde postoji povremeni kratak spoj ili slab kontakt koji se javlja samo pod određenim uslovima, na primer kad se kabl malo pomeri ili zagreje. Ovakav kvar je teže locirati, ali ga nikako ne treba ignorisati samo zato što osigurač i dalje „radi svoj posao” i isključuje struju."),
       h2("Četvrti znak: aluminijumski provodnici"),
-      p("Ako je vaš stan ili kuća izgrađena pre osamdesetih godina i nikad nije imala kompletnu zamenu instalacije, velika je verovatnoća da su provodnici aluminijumski, ne bakarni. Aluminijum sam po sebi nije opasan materijal, ali ima lošije karakteristike od bakra kad je u pitanju formiranje pouzdanog, dugotrajnog kontakta na spojevima, posebno u kombinaciji sa modernim prekidačima i utičnicama koji su projektovani prvenstveno za bakarne provodnike. Kombinacija starog aluminijuma i nove opreme je čest izvor problema koje viđam na terenu."),
+      p("Ako je vaš stan ili kuća izgrađena pre osamdesetih godina i nikad nije imala kompletnu zamenu instalacije, velika je verovatnoća da su provodnici aluminijumski, ne bakarni. Aluminijum sam po sebi nije opasan materijal, ali ima lošije karakteristike od bakra kad je u pitanju formiranje pouzdanog, dugotrajnog kontakta na spojevima, posebno u kombinaciji sa modernim prekidačima i utičnicama koji su projektovani prvenstveno za bakarne provodnike. Kombinacija starog aluminijuma i nove opreme je čest izvor problema u praksi."),
       h2("Peti znak: nema zaštitne (FID) sklopke u razvodnom ormanu"),
-      p("Ovo je verovatno najvažnija stavka na listi, jer se direktno tiče bezbednosti ljudi, ne samo opreme. Diferencijalna zaštitna sklopka isključuje struju u deliću sekunde ako dođe do kvara u izolaciji uređaja ili instalacije koji bi inače mogao da izazove strujni udar. Ako otvorite svoju tablu i vidite samo obične automatske osigurače, bez FID sklopke, to je nedostatak koji preporučujem da se sanira što pre, nezavisno od svega ostalog."),
+      p("Ovo je verovatno najvažnija stavka na listi, jer se direktno tiče bezbednosti ljudi, ne samo opreme. Diferencijalna zaštitna sklopka isključuje struju u deliću sekunde ako dođe do kvara u izolaciji uređaja ili instalacije koji bi inače mogao da izazove strujni udar. Ako otvorite svoju tablu i vidite samo obične automatske osigurače, bez FID sklopke, to je nedostatak koji je preporučljivo sanirati što pre, nezavisno od svega ostalog."),
       h2("Šta uraditi ako prepoznajete dva ili više ovih znakova"),
-      p("Ne morate odmah da planirate kompletnu zamenu instalacije. Prvi razuman korak je pregled, gde dolazim, proveravam stanje table, radim osnovna merenja i dajem vam realnu sliku, uz procenu da li je potrebna delimična sanacija, dodavanje zaštitne sklopke, ili je situacija ozbiljnija i zahteva širu intervenciju. Iskreno, u većini slučajeva problem se može rešiti bez rušenja zidova, samo treba znati tačno gde i šta popraviti."),
+      p("Ne mora se odmah planirati kompletna zamena instalacije. Prvi razuman korak je pregled koji obuhvata proveru stanja table, osnovna merenja i procenu da li je potrebna delimična sanacija, dodavanje zaštitne sklopke, ili je situacija ozbiljnija i zahteva širu intervenciju. U većini slučajeva problem se može rešiti bez rušenja zidova, potrebno je samo tačno utvrditi gde i šta treba popraviti."),
     ],
     faq: [
       { question: "Da li stara instalacija uvek znači opasnost?", answer: "Ne nužno, ali starost povećava verovatnoću problema. Najbolji način da saznate stvarno stanje je pregled sa merenjima, ne pretpostavka na osnovu godina objekta." },
@@ -792,7 +791,7 @@ export const blogPosts: BlogPostItem[] = [
     title: "Zašto vam osigurač stalno ispada i kako da znate da li je hitno",
     category: "bezbednost",
     excerpt:
-      "Osigurač koji ispada nije uvek isti problem. Evo kako razlikujem bezazlen slučaj preopterećenja od ozbiljnijeg kvara koji traži hitnu pažnju.",
+      "Osigurač koji ispada nije uvek isti problem. Evo kako se razlikuje bezazlen slučaj preopterećenja od ozbiljnijeg kvara koji traži hitnu pažnju.",
     summary:
       "Osigurač ispada zbog tri glavna razloga: preopterećenja linije, kratkog spoja na uređaju ili instalaciji, i kvara na samoj FID zaštitnoj sklopki. Obrazac ispadanja, da li je uvek isti uređaj u pitanju ili je nasumično, najviše govori o pravom uzroku.",
     keyTakeaways: [
@@ -803,9 +802,9 @@ export const blogPosts: BlogPostItem[] = [
     ],
     publishedAt: "2026-03-05T09:00:00.000Z",
     body: [
-      p("Ovo je poziv koji dobijam skoro svake nedelje, neko na drugom kraju linije, po pravilu pomalo nervozan, objašnjava da mu osigurač „stalno ispada” i pita da li treba da brine. Iskren odgovor je da zavisi, i u ovom tekstu objašnjavam po čemu razlikujem bezazlen slučaj od onog koji zahteva hitan izlazak."),
+      p("Osigurač koji „stalno ispada” jedan je od najčešćih razloga za poziv električaru, a pitanje da li treba brinuti zavisi od uzroka. U nastavku je objašnjeno po čemu se razlikuje bezazlen slučaj preopterećenja od ozbiljnijeg kvara koji zahteva hitan izlazak."),
       h2("Prvo, koja vrsta osigurača vam ispada"),
-      p("U razvodnom ormanu obično imate dve vrste zaštite, automatske osigurače koji štite pojedinačne linije od preopterećenja i kratkog spoja, i jednu ili dve zaštitne (FID) sklopke koje štite od strujnog udara. Ako vam ispada automatski osigurač za jednu konkretnu liniju, na primer samo za kuhinju, to je lokalizovan problem. Ako vam ispada glavna FID sklopka, koja isključuje struju u celom stanu odjednom, to je ozbiljniji signal jer znači da postoji kvar u izolaciji negde u instalaciji ili na nekom uređaju, i to je scenario gde preporučujem brži poziv."),
+      p("U razvodnom ormanu obično imate dve vrste zaštite, automatske osigurače koji štite pojedinačne linije od preopterećenja i kratkog spoja, i jednu ili dve zaštitne (FID) sklopke koje štite od strujnog udara. Ako vam ispada automatski osigurač za jednu konkretnu liniju, na primer samo za kuhinju, to je lokalizovan problem. Ako vam ispada glavna FID sklopka, koja isključuje struju u celom stanu odjednom, to je ozbiljniji signal jer znači da postoji kvar u izolaciji negde u instalaciji ili na nekom uređaju, i to je scenario u kom se preporučuje brži poziv."),
       h2("Obrazac ispadanja govori više nego što mislite"),
       h3("Ispada uvek kad uključite isti uređaj"),
       p("Ovo je, paradoksalno, dobra vest. Ako se osigurač uvek isključi u trenutku kad upalite veš mašinu, mikrotalasnu ili grejalicu, uzrok je gotovo sigurno na tom uređaju ili njegovom kablu, ne na vašoj instalaciji. Rešenje je popravka ili zamena uređaja, ne intervencija na instalaciji, mada je uvek dobro proveriti i samu utičnicu ako je uređaj stariji."),
@@ -814,10 +813,10 @@ export const blogPosts: BlogPostItem[] = [
       h3("Ispada nasumično, bez jasnog obrasca"),
       p("Ovo je slučaj koji zahteva pravu dijagnostiku, jer uzrok može biti bilo šta od labavog kontakta u razvodnoj kutiji, oštećene izolacije na mestu gde je kabl savijen ili pritisnut nameštajem, do vlage koja je ušla u instalaciju. Ovde ne pomaže nagađanje, potrebno je sistematski isključivati i proveravati delove instalacije dok se kvar ne izoluje."),
       h2("Šta nikad ne treba raditi"),
-      p("Nikad nemojte premošćavati osigurač žicom ili metalnim predmetom da bi prestao da ispada, i nikad nemojte ugrađivati osigurač veće jačine od one predviđene za taj strujni krug samo da bi „rešili” učestalo ispadanje. Osigurač ispada zato što nešto nije u redu, i onemogućavanje te zaštite ne rešava problem, samo uklanja signal upozorenja dok se problem ne pretvori u požar. Ovo zvuči kao ekstremna izjava, ali sam na terenu video posledice tačno ovakve improvizacije, i nije lepo za videti."),
+      p("Nikad nemojte premošćavati osigurač žicom ili metalnim predmetom da bi prestao da ispada, i nikad nemojte ugrađivati osigurač veće jačine od one predviđene za taj strujni krug samo da bi „rešili” učestalo ispadanje. Osigurač ispada zato što nešto nije u redu, i onemogućavanje te zaštite ne rešava problem, samo uklanja signal upozorenja dok se problem ne pretvori u požar."),
       h2("Kad je situacija stvarno hitna"),
       ...bullets([
-        "Osjeća se miris paljevine ili dima pri ili nakon ispadanja",
+        "Oseća se miris paljevine ili dima pri ili nakon ispadanja",
         "Osigurač ili prekidač je vidno pocrneo ili deformisan",
         "Čuje se pucketanje ili zujanje iz razvodne table",
         "Ispada glavna FID sklopka, ne samo pojedinačni osigurač",
@@ -836,7 +835,7 @@ export const blogPosts: BlogPostItem[] = [
     title: "Da li smete sami da radite na strujnim instalacijama u Srbiji",
     category: "saveti",
     excerpt:
-      "Zamena sijalice je jedno, a provlačenje nove linije kroz zid nešto sasvim drugo. Evo gde je granica koju ne bih prelazio ni ja bez odgovarajuće pripreme.",
+      "Zamena sijalice je jedno, a provlačenje nove linije kroz zid nešto sasvim drugo. Evo gde je granica koju je bolje ne prelaziti bez odgovarajuće stručne pripreme.",
     summary:
       "Sitne intervencije poput zamene sijalice ili prekidača identičnog tipa su uobičajene i relativno bezbedne uz osnovnu opreznost. Radovi na razvodnom ormanu, provlačenje novih linija i bilo šta što zahteva tehnički prijem trebalo bi prepustiti licenciranom električaru, i zbog bezbednosti i zbog validnosti dokumentacije.",
     keyTakeaways: [
@@ -847,21 +846,21 @@ export const blogPosts: BlogPostItem[] = [
     ],
     publishedAt: "2026-04-01T09:00:00.000Z",
     body: [
-      p("Ovo pitanje mi ljudi postavljaju često, obično kroz varijaciju „mogu li ovo sam da uradim, ili je pametnije da pozovem nekoga”. Iskren odgovor zavisi od toga o kakvom se poslu radi, i u ovom tekstu pokušavam da povučem realnu, praktičnu granicu, ne samo formalnu."),
+      p("Pitanje „mogu li ovo sam da uradim, ili je pametnije pozvati nekoga” jedno je od najčešćih kod manjih elektro intervencija. Odgovor zavisi od toga o kakvom se poslu radi, a u nastavku je povučena realna, praktična granica, ne samo formalna."),
       h2("Šta je uobičajeno i relativno bezbedno samostalno raditi"),
       p("Zamena pregorele sijalice, čišćenje prekidača ili utičnice spolja, zamena prekidača identičnim modelom uz prethodno isključivanje odgovarajućeg osigurača, sve su to intervencije koje veliki broj ljudi radi samostalno bez problema. Ključna reč je „identičnim”, jer zamena jednog tipa uređaja drugim, na primer običnog prekidača dimerom, već zahteva razumevanje kompatibilnosti sa vrstom rasvete, što nije uvek očigledno."),
-      h2("Gde bih ja lično stao, i zašto"),
-      p("Bilo kakav rad unutar razvodnog ormana, provlačenje nove linije kroz zid, dodavanje nove utičnice na postojeći strujni krug, ili bilo šta što zahteva otvaranje zida ili poda, po mom mišljenju prelazi granicu koju treba prepustiti nekome ko to radi profesionalno. Ne zato što je nemoguće naučiti, nego zato što posledice greške nisu uvek trenutne. Loše urađen spoj možda neće praviti probleme mesecima, čak godinama, a onda se javi baš u trenutku kad je najgore, na primer kao uzrok požara ili strujnog udara."),
-      h2("Pravni aspekt, kad vam stvarno treba licencirani izvođač"),
+      h2("Gde je granica samostalnog rada"),
+      p("Bilo kakav rad unutar razvodnog ormana, provlačenje nove linije kroz zid, dodavanje nove utičnice na postojeći strujni krug, ili bilo šta što zahteva otvaranje zida ili poda, prelazi granicu koju je bolje prepustiti nekome ko to radi profesionalno. Ne zato što je nemoguće naučiti, nego zato što posledice greške nisu uvek trenutne. Loše urađen spoj možda neće praviti probleme mesecima, čak godinama, a onda se javi baš u trenutku kad je najgore, na primer kao uzrok požara ili strujnog udara."),
+      h2("Pravni aspekt: kada je potreban stručan izvođač"),
       p("Za novogradnju i veće rekonstrukcije, tehnički prijem instalacije zahteva dokumentaciju koju izdaje odgovorno lice, sa odgovarajućim merenjima i atestima. Ovo nije nešto što možete sami sebi izdati, bez obzira koliko dobro ste uradili posao. Slično važi i za osiguranje nekretnine, mnoge polise imaju klauzule koje se odnose na stanje električne instalacije, i u slučaju štete izazvane požarom, osiguravajuća kuća može tražiti dokaz da je instalacija bila u ispravnom stanju."),
       h2("Najveći rizik nije ono što mislite"),
       p("Kad ljudi razmišljaju o riziku samostalnog rada, prva asocijacija je strujni udar u trenutku rada, i to jeste realan rizik, ali uz osnovnu opreznost i isključivanje odgovarajućeg osigurača, taj rizik je kontrolisan za jednostavnije intervencije. Veći, podmukliji rizik je loše izveden spoj koji radi naizgled normalno godinama, a onda otkaže na način koji ugrožava nekog drugog, možda čak i novog vlasnika stana koji nema pojma da je taj deo instalacije rađen amaterski."),
       h2("Praktičan savet: kad sumnjate, pitajte pre nego što počnete"),
-      p("Ne moram da dobijem posao da bih odgovorio na kratko pitanje telefonom. Ako niste sigurni da li je neka intervencija u domenu „mogu sam” ili „treba profesionalac”, slobodno pozovite i opišite šta planirate, radije ću vam za dva minuta reći da je to bezbedno da uradite sami, nego da posle sanirati posledice nečega što je krenulo po zlu."),
+      p("Kod nedoumice da li je neka intervencija u domenu „mogu sam” ili „treba profesionalac”, najjednostavnije je opisati situaciju telefonom pre početka radova. Kratak razgovor unapred često uštedi mnogo više vremena i novca nego saniranje posledica nečega što je krenulo po zlu."),
     ],
     faq: [
       { question: "Mogu li sam da zamenim prekidač istim modelom?", answer: "Da, uz prethodno isključivanje odgovarajućeg osigurača na razvodnoj tabli, ovo je uobičajena i relativno bezbedna intervencija za većinu ljudi." },
-      { question: "Da li mi treba dozvola za manje elektro radove u sopstvenom stanu?", answer: "Za sitne intervencije poput zamene prekidača ili sijalice, ne treba vam posebna dozvola. Za veće zahvate koji utiču na instalaciju, preporučuje se angažovanje licenciranog izvođača, posebno zbog dokumentacije." },
+      { question: "Da li mi treba dozvola za manje elektro radove u sopstvenom stanu?", answer: "Za sitne intervencije poput zamene prekidača ili sijalice, ne treba vam posebna dozvola. Za veće zahvate koji utiču na instalaciju, preporučuje se angažovanje stručnog izvođača, posebno zbog dokumentacije." },
       { question: "Šta ako prodajem stan gde su radovi rađeni samostalno?", answer: "Preporučujemo pregled pre prodaje kako biste imali jasnu sliku stanja instalacije i eventualno sanirate sporne delove pre nego što to postane predmet pregovora sa kupcem." },
     ],
   },
@@ -870,7 +869,7 @@ export const blogPosts: BlogPostItem[] = [
     title: "Šta tačno proveravam kada pregledam instalaciju pre kupovine stana",
     category: "renoviranje",
     excerpt:
-      "Kupovina stana je verovatno najveća investicija koju ćete napraviti. Evo tačno šta radim kada me neko pozove da proverim instalaciju pre nego što potpiše ugovor.",
+      "Kupovina stana je verovatno najveća investicija koju ćete napraviti. Evo šta tačno obuhvata provera instalacije pre potpisivanja ugovora.",
     summary:
       "Pregled pre kupovine obuhvata vizuelnu proveru razvodne table, test zaštitne sklopke, merenje otpora izolacije na dostupnim krugovima i procenu starosti i tipa provodnika. Rezultat je pisani nalaz koji kupac može koristiti u pregovorima ili kao osnov za odluku.",
     keyTakeaways: [
@@ -881,19 +880,19 @@ export const blogPosts: BlogPostItem[] = [
     ],
     publishedAt: "2026-04-22T09:00:00.000Z",
     body: [
-      p("Kad me pozove neko ko je pronašao stan koji mu se sviđa i želi proveru pre potpisivanja, uvek na početku razgovora kažem istu stvar: radim isključivo u vašem interesu, ne u interesu prodavca ili agencije. Ovo je važno da se kaže naglas, jer nalaz koji dajem mora da bude iskren, čak i kad to znači da će kupac na osnovu njega tražiti popust ili odustati od kupovine."),
+      p("Pregled instalacije pre kupovine stana radi se isključivo u interesu kupca, ne prodavca ili agencije, i to je važno naglasiti unapred. Nalaz mora biti iskren, čak i kad to znači da će kupac na osnovu njega tražiti popust ili odustati od kupovine."),
       h2("Prvi korak: razgovor i osnovne informacije"),
-      p("Pre nego što uopšte otvorim tablu, pitam koliko je zgrada stara, da li je bilo renoviranja i kada, i da li prodavac zna nešto o poslednjem servisu ili proveri instalacije. Ove informacije mi daju okvir, stan iz devedesetih koji nikad nije renoviran zahteva drugačiji nivo pažnje od stana u zgradi izgrađenoj pre pet godina."),
+      p("Pre otvaranja table proverava se koliko je zgrada stara, da li je bilo renoviranja i kada, i da li prodavac zna nešto o poslednjem servisu ili proveri instalacije. Ove informacije daju okvir za pregled, stan iz devedesetih koji nikad nije renoviran zahteva drugačiji nivo pažnje od stana u zgradi izgrađenoj pre pet godina."),
       h2("Drugi korak: vizuelni pregled razvodne table"),
-      p("Ovde tražim tip table (moderna modularna ili stara porcelanska), prisustvo i tip zaštitnih uređaja, tragove zagrevanja ili oksidacije na spojevima, i opšti utisak o urednosti ožičenja. Neuredna, improvizovana tabla sa dodatnim, vidno naknadno dodatim vodovima je uvek signal da je vredno dublje pogledati ostatak instalacije."),
+      p("Pregled table obuhvata tip table (moderna modularna ili stara porcelanska), prisustvo i tip zaštitnih uređaja, tragove zagrevanja ili oksidacije na spojevima, i opšti utisak o urednosti ožičenja. Neuredna, improvizovana tabla sa dodatnim, vidno naknadno dodatim vodovima je uvek signal da je vredno dublje pogledati ostatak instalacije."),
       h2("Treći korak: test zaštitne sklopke"),
-      p("Svaka tabla sa modernom zaštitom ima test dugme na FID sklopki, koje simulira kvar i proverava da li sklopka zaista isključuje struju. Iznenađujuće često nailazim na sklopke koje fizički postoje, ali ne funkcionišu ispravno, što znači da stan izgleda zaštićen, a zapravo nije. Ako sklopka uopšte ne postoji, to je stavka koju uvek posebno naglašavam u nalazu, jer je ugradnja relativno jeftina, ali suštinski važna za bezbednost."),
+      p("Svaka tabla sa modernom zaštitom ima test dugme na FID sklopki, koje simulira kvar i proverava da li sklopka zaista isključuje struju. U praksi nije redak slučaj da sklopka fizički postoji, ali ne funkcioniše ispravno, što znači da stan izgleda zaštićen, a zapravo nije. Ako sklopka uopšte ne postoji, to je stavka koja se posebno naglašava u nalazu, jer je ugradnja relativno jeftina, ali suštinski važna za bezbednost."),
       h2("Četvrti korak: merenje otpora izolacije"),
-      p("Gde je to izvodljivo bez rasklapanja zidova, merim otpor izolacije na dostupnim strujnim krugovima direktno sa razvodne table. Ovo merenje daje konkretan broj koji pokazuje da li je izolacija provodnika i dalje u dobrom stanju ili se približava kraju svog veka. Nizak otpor izolacije je jasan signal da instalacija, ili bar deo nje, uskoro zahteva zamenu."),
+      p("Gde je to izvodljivo bez rasklapanja zidova, meri se otpor izolacije na dostupnim strujnim krugovima direktno sa razvodne table. Ovo merenje daje konkretan broj koji pokazuje da li je izolacija provodnika i dalje u dobrom stanju ili se približava kraju svog veka. Nizak otpor izolacije je jasan signal da instalacija, ili bar deo nje, uskoro zahteva zamenu."),
       h2("Peti korak: procena tipa i starosti provodnika"),
-      p("Kroz otvorene utičnice ili prekidače, kad je to moguće bez oštećenja, procenjujem da li su provodnici bakarni ili aluminijumski, i vizuelno stanje izolacije. Ovo je često presudna informacija za kupca, jer aluminijumska instalacija starija od trideset pet do četrdeset godina realno znači da bi kompletna zamena trebalo da bude uračunata u budžet, bilo kroz nižu ponuđenu cenu, bilo kroz plan radova nakon useljenja."),
+      p("Kroz otvorene utičnice ili prekidače, kad je to moguće bez oštećenja, procenjuje se da li su provodnici bakarni ili aluminijumski, i vizuelno stanje izolacije. Ovo je često presudna informacija za kupca, jer aluminijumska instalacija starija od trideset pet do četrdeset godina realno znači da bi kompletna zamena trebalo da bude uračunata u budžet, bilo kroz nižu ponuđenu cenu, bilo kroz plan radova nakon useljenja."),
       h2("Šta dobijate na kraju"),
-      p("Pisani nalaz sa svim izmerenim vrednostima, opisom stanja table i instalacije, i, ako ima nedostataka, okvirnom procenom troška sanacije. Ovaj dokument nije samo informacija za vas, mnogi klijenti su ga uspešno koristili kao argument u pregovorima o ceni, a neki su na osnovu njega odlučili da odustanu od kupovine kad se pokazalo da je potrebna sanacija veća nego što su bili spremni da prihvate."),
+      p("Rezultat je pisani nalaz sa svim izmerenim vrednostima, opisom stanja table i instalacije, i, ako ima nedostataka, okvirnom procenom troška sanacije. Ovaj dokument je koristan i kao argument u pregovorima o ceni, a u pojedinim slučajevima kupci na osnovu njega odlučuju da odustanu od kupovine kad se pokaže da je potrebna sanacija veća nego što su bili spremni da prihvate."),
     ],
     faq: [
       { question: "Koliko unapred treba zakazati pregled pre kupovine?", answer: "Preporučujemo zakazivanje čim se ozbiljno zainteresujete za nekretninu, obično možemo izaći u roku od nekoliko dana, a pregled traje sat do sat i po." },
@@ -906,7 +905,7 @@ export const blogPosts: BlogPostItem[] = [
     title: "Kako izabrati električara: pitanja koja vredi postaviti pre nego što potvrdite termin",
     category: "saveti",
     excerpt:
-      "Cena nije jedini, a ni najvažniji faktor. Evo šta bih ja pitao da tražim električara za sopstveni stan, iz perspektive nekog ko je godinama na terenu.",
+      "Cena nije jedini, a ni najvažniji faktor. Evo koja pitanja vredi postaviti pre nego što se odabere izvođač za sopstveni stan.",
     summary:
       "Pri izboru električara vredi proveriti da li izdaje račun i garanciju, da li poseduje odgovarajuće kvalifikacije, da li jasno objašnjava obim posla pre početka, i da li koristi atestiran materijal. Najniža ponuđena cena je često znak da se negde štedi na koracima koji se kasnije skupo plate.",
     keyTakeaways: [
@@ -917,19 +916,19 @@ export const blogPosts: BlogPostItem[] = [
     ],
     publishedAt: "2026-05-10T09:00:00.000Z",
     body: [
-      p("Ljudi me često pitaju za preporuku kolege iz drugih gradova, i svaki put kad odgovaram, dajem im isti set pitanja koja bih i sam postavio nekom kome bih poverio svoju instalaciju. Ne postoji jedinstven „pravi” odgovor na svako od ovih pitanja, ali način na koji neko odgovara govori mnogo o njegovoj ozbiljnosti."),
+      p("Kad je potrebna preporuka električara u drugom gradu, koristan je isti set pitanja koji bi trebalo postaviti svakom izvođaču kome se poverava sopstvena instalacija. Ne postoji jedinstven „pravi” odgovor na svako od ovih pitanja, ali način na koji neko odgovara govori mnogo o njegovoj ozbiljnosti."),
       h2("Da li izdaje račun i garanciju na izveden posao"),
       p("Ovo je osnovno, ali iznenađujuće često zanemareno pitanje. Račun nije samo formalnost za poresku upravu, on je i vaš dokaz da je posao izveden, korisan ako se problem ponovi ili ako kasnije prodajete nekretninu. Garancija na rad, obično šest meseci do godinu dana, pokazuje da izvođač stoji iza kvaliteta svog posla, ne samo da je „odradio i otišao”."),
       h2("Da li objašnjava obim posla i cenu pre početka"),
       p("Ozbiljan električar će, pre nego što počne rad, objasniti šta tačno planira da uradi i zašto, i dati vam jasnu cenu ili barem opseg cene pre nego što uzme alat u ruke. Ako neko izbegava konkretan odgovor na pitanje „koliko će ovo koštati” i stalno odgovara neodređeno, to je signal da će konačna cena verovatno biti veća nego što ste očekivali."),
       h2("Da li koristi atestiran materijal"),
-      p("Pitajte konkretno kakvu opremu koristi, i ne zadovoljavajte se odgovorom „dobru robu”. Atestirana oprema poznatih proizvođača je nešto skuplja od nepoznatih, neatestiranih alternativa, ali razlika u ceni je mala u odnosu na ukupan trošak posla, dok je razlika u pouzdanosti i bezbednosti značajna. Ovo je jedno od retkih mesta gde uštedu od nekoliko hiljada dinara ne bih preporučio."),
+      p("Pitajte konkretno kakvu opremu koristi, i ne zadovoljavajte se odgovorom „dobru robu”. Atestirana oprema poznatih proizvođača je nešto skuplja od nepoznatih, neatestiranih alternativa, ali razlika u ceni je mala u odnosu na ukupan trošak posla, dok je razlika u pouzdanosti i bezbednosti značajna. Ovo je jedno od retkih mesta gde ušteda od nekoliko hiljada dinara nije preporučljiva."),
       h2("Da li vam jasno objašnjava šta je pronašao i šta radi"),
       p("Dobar znak je kad vam električar, na primer tokom dijagnostike kvara, objasni šta je tačno pronašao i zašto je do problema došlo, umesto da samo kaže „popravljeno je” i ode. Ovo ne znači da morate da razumete svaki tehnički detalj, ali objašnjenje pokazuje da je posao stvarno urađen razumno, ne samo „zakrpljen” da problem privremeno nestane."),
       h2("Zašto najniža cena nije uvek najbolji izbor"),
-      p("Razumem da cena igra ulogu, i sam vodim računa da moje cene budu realne za tržište. Ali kad vidim ponudu koja je značajno niža od proseka, prvo pitanje koje sebi postavim je gde se štedi, da li je to na materijalu, na vremenu provedenom na svakom koraku poput vakumiranja ili testiranja, ili na iskustvu izvođača. Ova ušteda se retko vidi odmah, ali se gotovo uvek naplati kasnije, kroz kraći vek trajanja instalacije ili učestalije kvarove."),
+      p("Cena svakako igra ulogu, ali kad je ponuda značajno niža od proseka tržišta, vredi se zapitati gde se štedi, da li je to na materijalu, na vremenu provedenom na svakom koraku poput vakumiranja ili testiranja, ili na iskustvu izvođača. Ova ušteda se retko vidi odmah, ali se gotovo uvek naplati kasnije, kroz kraći vek trajanja instalacije ili učestalije kvarove."),
       h2("Poslednji, možda najvažniji test"),
-      p("Kako se neko ponaša kad postavite pitanje koje im možda ne odgovara, na primer „zašto je ovo skuplje nego kod konkurencije” ili „šta tačno uključuje ova cena”. Izvođač koji strpljivo i konkretno odgovori zaslužuje poverenje više nego onaj koji postane odbrambeno raspoložen ili izbegava odgovor. Iskreno, ovo je test koji bih i sam želeo da prođem kad me neko pita isto."),
+      p("Kako se neko ponaša kad postavite pitanje koje im možda ne odgovara, na primer „zašto je ovo skuplje nego kod konkurencije” ili „šta tačno uključuje ova cena”, često govori više od samog odgovora. Izvođač koji strpljivo i konkretno odgovori zaslužuje poverenje više nego onaj koji postane odbrambeno raspoložen ili izbegava odgovor."),
     ],
     faq: [
       { question: "Da li je normalno tražiti pisanu ponudu pre početka radova?", answer: "Da, apsolutno, i ozbiljan izvođač neće imati problem da vam da jasnu ponudu ili barem opisan obim posla i okvirnu cenu pre nego što počne." },
@@ -942,7 +941,7 @@ export const blogPosts: BlogPostItem[] = [
     title: "Kako pripremiti instalaciju stana pre nego što počne renoviranje",
     category: "renoviranje",
     excerpt:
-      "Renoviranje je idealna prilika da se instalacija uradi kako treba, ali samo ako se elektro deo isplanira pre, ne usred radova. Evo redosleda koji preporučujem.",
+      "Renoviranje je idealna prilika da se instalacija uradi kako treba, ali samo ako se elektro deo isplanira pre, ne usred radova. Evo preporučenog redosleda.",
     summary:
       "Elektro deo renoviranja treba planirati pre početka radova, ne usred njih, jer izmene nakon što su zidovi već zatvoreni koštaju mnogo više. Ključni koraci su procena postojeće instalacije, definisanje rasporeda novih tačaka prema planu nameštaja, i usklađivanje sa ostalim izvođačima oko redosleda radova.",
     keyTakeaways: [
@@ -953,24 +952,24 @@ export const blogPosts: BlogPostItem[] = [
     ],
     publishedAt: "2026-06-08T09:00:00.000Z",
     body: [
-      p("Najčešća greška koju vidim kod renoviranja nije loše izveden elektro rad, nego elektro rad koji je isplaniran prekasno, kad su zidovi već zagletovani i obojeni, i kad svaka izmena znači ponovno bušenje i prljavštinu. U ovom tekstu opisujem redosled koji preporučujem svima koji planiraju veće renoviranje."),
+      p("Najčešća greška kod renoviranja nije loše izveden elektro rad, nego elektro rad koji je isplaniran prekasno, kad su zidovi već zagletovani i obojeni, i kad svaka izmena znači ponovno bušenje i prljavštinu. U nastavku je opisan redosled preporučen svima koji planiraju veće renoviranje."),
       h2("Korak jedan: procena postojeće instalacije, pre nego što odlučite šta menjate"),
-      p("Pre nego što odlučite da li menjate celu instalaciju ili samo dodajete par tačaka, vredi uraditi kratku procenu postojećeg stanja. Ako je instalacija bakarna, relativno nova i u dobrom stanju, često ima smisla samo dodati nove tačke tamo gde ih nedostaje. Ako je aluminijumska ili stara više od tri decenije, renoviranje je idealna prilika da se uradi kompletna zamena, jer ćete svakako otvarati zidove za druge radove, pa je dodatni trošak elektro dela relativno manji nego kad bi se radio kao samostalna intervencija kasnije."),
+      p("Pre nego što odlučite da li menjate celu instalaciju ili samo dodajete par tačaka, vredi uraditi kratku procenu postojećeg stanja. Ako je instalacija bakarna, relativno nova i u dobrom stanju, često ima smisla samo dodati nove tačke tamo gde ih nedostaje. Ako je aluminijumska ili stara više od tri decenije, renoviranje je idealna prilika da se uradi kompletna zamena, jer se zidovi svakako otvaraju za druge radove, pa je dodatni trošak elektro dela relativno manji nego kad bi se radio kao samostalna intervencija kasnije."),
       h2("Korak dva: raspored tačaka prema stvarnom planu nameštaja, ne generičkom šablonu"),
-      p("Ovo je faza koju najviše volim jer tu se prave odluke koje ćete osećati svaki dan narednih dvadeset godina. Sednite sa planom prostorije i razmislite konkretno, gde ide krevet, da li imate noćne lampe sa obe strane, gde stoji televizor i da li vam treba utičnica iza njega za skrivanje kablova, da li planirate radni sto, da li kuhinja ima ostrvo koje zahteva sopstvenu utičnicu. Generički raspored, po jedna utičnica na svakom zidu, retko odgovara stvarnom korišćenju prostora, i skoro uvek se na kraju pokaže da negde nedostaje utičnica tačno tamo gde vam najviše treba."),
+      p("Ovo je faza u kojoj se prave odluke koje će se osećati svaki dan narednih dvadeset godina. Vredi razmisliti konkretno, gde ide krevet, da li su potrebne noćne lampe sa obe strane, gde stoji televizor i da li treba utičnica iza njega za skrivanje kablova, da li se planira radni sto, da li kuhinja ima ostrvo koje zahteva sopstvenu utičnicu. Generički raspored, po jedna utičnica na svakom zidu, retko odgovara stvarnom korišćenju prostora, i skoro uvek se na kraju pokaže da negde nedostaje utičnica tačno tamo gde je najpotrebnija."),
       h2("Korak tri: usklađivanje redosleda sa drugim izvođačima"),
       p("Elektro trase se rade pre gletovanja i farbanja, to je jasno svima, ali manje je očigledno da treba uskladiti i sa vodoinstalaterima, posebno u kupatilu i kuhinji, gde se elektro i vodovodne instalacije često ukrštaju u istom delu zida. Dobra praksa je da elektro i vodoinstalater dođu istog dana na dogovor oko trasa, kako se ne bi desilo da vodovodna cev prolazi tačno tamo gde je planirana utičnica."),
       h2("Korak četiri: razmislite o rezervnim cevima za budućnost"),
-      p("Ovo je mali trik koji preporučujem svakom klijentu tokom renoviranja, postavljanje jedne ili dve prazne instalacione cevi od table do ključnih tačaka u stanu, na primer do dnevnog boravka ili budućeg radnog prostora. Cena ove cevi tokom renoviranja je zanemarljiva, ali vam omogućava da za par godina, ako vam zatreba nova linija, na primer za dodatni uređaj ili pametnu kuću, ne morate ponovo da bušite i prljate gotov zid, samo provučete novi kabl kroz već postojeću cev."),
+      p("Praktičan korak koji se preporučuje tokom renoviranja je postavljanje jedne ili dve prazne instalacione cevi od table do ključnih tačaka u stanu, na primer do dnevnog boravka ili budućeg radnog prostora. Cena ove cevi tokom renoviranja je zanemarljiva, a omogućava da se za par godina, ako zatreba nova linija za dodatni uređaj ili pametnu kuću, izbegne ponovno bušenje i prljanje gotovog zida, jer se novi kabl provuče kroz već postojeću cev."),
       h2("Korak pet: ne zaboravite pametne funkcije, čak i ako ih odmah ne koristite"),
-      p("Sve više klijenata pita za pripremu instalacije za pametne prekidače, senzore pokreta ili automatizovanu rasvetu. Čak i ako trenutno ne planirate da to sve ugradite, jeftinije je pripremiti dodatni provodnik (na primer neutralni vod na mestu prekidača, koji je potreban za većinu pametnih prekidača) tokom renoviranja nego naknadno, kad je zid već gotov. Ne morate odmah kupiti opremu, samo ostavite mogućnost otvorenu."),
-      h2("Kad je najbolje vreme da nas pozovete"),
-      p("Idealno, u fazi kad imate gotov idejni plan prostorija i okvirnu ideju rasporeda nameštaja, ali pre nego što je bilo šta zazidano. U tom trenutku možemo zajedno da prođemo kroz svaku prostoriju, predložimo raspored na osnovu iskustva sa sličnim prostorima, i date vam realnu cenu pre nego što majstori uopšte počnu da rade."),
+      p("Priprema instalacije za pametne prekidače, senzore pokreta ili automatizovanu rasvetu sve je traženija. Čak i ako se trenutno ne planira ugradnja svega toga, jeftinije je pripremiti dodatni provodnik (na primer neutralni vod na mestu prekidača, koji je potreban za većinu pametnih prekidača) tokom renoviranja nego naknadno, kad je zid već gotov. Opremu nije potrebno odmah kupovati, dovoljno je ostaviti mogućnost otvorenu."),
+      h2("Kad je najbolje vreme za kontakt"),
+      p("Idealno u fazi kad postoji gotov idejni plan prostorija i okvirna ideja rasporeda nameštaja, ali pre nego što je bilo šta zazidano. U tom trenutku je moguće proći kroz svaku prostoriju, predložiti raspored na osnovu iskustva sa sličnim prostorima, i dati realnu cenu pre nego što majstori uopšte počnu da rade."),
     ],
     faq: [
       { question: "Da li je jeftinije raditi elektro instalaciju tokom renoviranja ili posle?", answer: "Znatno je jeftinije tokom renoviranja, dok su zidovi već otvoreni za druge radove. Naknadna izmena gotovog zida uvek podrazumeva dodatni trošak bušenja, gletovanja i farbanja." },
       { question: "Koliko unapred treba pozvati električara u odnosu na početak renoviranja?", answer: "Preporučujemo kontakt čim imate gotov idejni raspored prostorija, obično dve do četiri nedelje pre planiranog početka radova, kako bismo stigli da se uklopimo u vaš raspored izvođača." },
-      { question: "Da li vredi postavljati prazne cevi za buduće linije?", answer: "Da, to je jeftina investicija koja olakšava buduće izmene bez ponovnog otvaranja zida, i preporučujem je kod svakog većeg renoviranja." },
+      { question: "Da li vredi postavljati prazne cevi za buduće linije?", answer: "Da, to je jeftina investicija koja olakšava buduće izmene bez ponovnog otvaranja zida, i preporučuje se kod svakog većeg renoviranja." },
     ],
   },
 ];
