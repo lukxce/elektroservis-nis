@@ -30,10 +30,13 @@ export const contactSubmission = defineType({
       readOnly: true,
       options: {
         list: [
-          {title: 'Montaža instalacije', value: 'montaza'},
-          {title: 'Servis / redovno održavanje', value: 'servis'},
-          {title: 'Prijava kvara', value: 'kvar'},
-          {title: 'Dijagnostika / merenje', value: 'dijagnostika'},
+          {title: 'Elektroinstalacije', value: 'elektroinstalacije'},
+          {title: 'Ugradnja rasvete', value: 'rasveta'},
+          {title: 'Osigurači i table', value: 'osiguraci-i-table'},
+          {title: 'Utičnice i prekidači', value: 'uticnice-i-prekidaci'},
+          {title: 'Servis kućnih uređaja', value: 'servis-uredjaja'},
+          {title: 'Klima uređaji', value: 'klima-uredjaji'},
+          {title: 'EV punjači', value: 'ev-punjaci'},
           {title: 'Ostalo', value: 'ostalo'},
         ],
       },

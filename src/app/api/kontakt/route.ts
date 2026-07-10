@@ -2,7 +2,16 @@ import { NextResponse } from "next/server";
 
 import { serverClient } from "@/sanity/lib/serverClient";
 
-const VALID_REASONS = ["montaza", "servis", "kvar", "dijagnostika", "ostalo"];
+const VALID_REASONS = [
+  "elektroinstalacije",
+  "rasveta",
+  "osiguraci-i-table",
+  "uticnice-i-prekidaci",
+  "servis-uredjaja",
+  "klima-uredjaji",
+  "ev-punjaci",
+  "ostalo",
+];
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);

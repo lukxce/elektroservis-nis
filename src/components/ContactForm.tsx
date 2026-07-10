@@ -3,10 +3,13 @@
 import { useState, type FormEvent } from "react";
 
 const reasonOptions = [
-  { value: "montaza", label: "Montaža instalacije" },
-  { value: "servis", label: "Servis / redovno održavanje" },
-  { value: "kvar", label: "Prijava kvara" },
-  { value: "dijagnostika", label: "Dijagnostika / merenje" },
+  { value: "elektroinstalacije", label: "Elektroinstalacije" },
+  { value: "rasveta", label: "Ugradnja rasvete" },
+  { value: "osiguraci-i-table", label: "Osigurači i table" },
+  { value: "uticnice-i-prekidaci", label: "Utičnice i prekidači" },
+  { value: "servis-uredjaja", label: "Servis kućnih uređaja" },
+  { value: "klima-uredjaji", label: "Klima uređaji" },
+  { value: "ev-punjaci", label: "EV punjači" },
   { value: "ostalo", label: "Ostalo" },
 ];
 

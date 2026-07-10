@@ -65,11 +65,11 @@ export default async function HomePage() {
               <span className="bg-gradient-to-r from-accent to-amber-500 bg-clip-text text-transparent">
                 Električar {settings.city}
               </span>
-              <span className="mt-3 block text-xl font-semibold text-navy/70 sm:text-2xl">
-                Elektroinstalacije, rasveta, servis uređaja i hitne intervencije
-              </span>
             </h1>
-            <p className="mt-5 max-w-md text-lg text-muted">
+            <p className="mt-3 max-w-md text-lg font-medium text-navy/60">
+              Elektroinstalacije, rasveta, servis uređaja i hitne intervencije
+            </p>
+            <p className="mt-4 max-w-md text-lg text-muted">
               Brz izlazak na teren, transparentne cene i pažljiv pristup{experienceYears ? ` i preko ${experienceYears} godina iskustva` : ""} sa instalacijama u stanovima, kućama i poslovnom prostoru.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -180,17 +180,31 @@ export default async function HomePage() {
               <Link
                 key={page.slug}
                 href={`/usluge/${page.slug}`}
-                className="group flex flex-col rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm transition hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
               >
-                <h3 className="font-semibold text-navy group-hover:text-accent-dark">
-                  {page.title}
-                </h3>
-                {page.heroSubtitle && (
-                  <p className="mt-2 text-sm text-muted">{page.heroSubtitle}</p>
-                )}
-                <span className="mt-4 text-sm font-semibold text-accent-dark">
-                  Saznajte više →
-                </span>
+                <div className="relative h-36 w-full overflow-hidden">
+                  {page.imageUrl ? (
+                    <Image
+                      src={page.imageUrl}
+                      alt={page.title}
+                      fill
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <PlaceholderImage label={`Slika: ${page.title}`} className="h-36 w-full" />
+                  )}
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-semibold text-navy group-hover:text-accent-dark">
+                    {page.title}
+                  </h3>
+                  {page.heroSubtitle && (
+                    <p className="mt-2 text-sm text-muted">{page.heroSubtitle}</p>
+                  )}
+                  <span className="mt-auto pt-4 text-sm font-semibold text-accent-dark">
+                    Saznajte više →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -294,26 +308,26 @@ export default async function HomePage() {
               Radimo po važećim tehničkim propisima, sa atestiranom opremom i
               pisanom dokumentacijom o merenjima.
             </p>
-            <dl className={`mt-8 grid gap-4 border-y border-white/10 py-6 ${experienceYears !== undefined ? "grid-cols-3" : "grid-cols-2"}`}>
-              {experienceYears !== undefined && (
-                <div>
-                  <dd className="text-3xl font-bold text-accent sm:text-4xl">
-                    {experienceYears}+
-                  </dd>
-                  <dt className="mt-1 text-xs text-white/50">godina iskustva</dt>
-                </div>
-              )}
-              <div>
-                <dd className="text-3xl font-bold text-accent sm:text-4xl">7</dd>
-                <dt className="mt-1 text-xs text-white/50">oblasti usluga</dt>
+            {experienceYears !== undefined && (
+              <div className="mt-6 inline-flex items-baseline gap-2 rounded-xl bg-white/5 px-4 py-2 ring-1 ring-white/10">
+                <span className="text-2xl font-bold text-accent">{experienceYears}+</span>
+                <span className="text-sm text-white/60">godina iskustva</span>
               </div>
-              <div>
-                <dd className="text-3xl font-bold text-accent sm:text-4xl">
-                  {settings.serviceAreas.length}
-                </dd>
-                <dt className="mt-1 text-xs text-white/50">delova grada pokriveno</dt>
-              </div>
-            </dl>
+            )}
+            <ul className="mt-8 grid grid-cols-1 gap-3 border-y border-white/10 py-6 sm:grid-cols-2">
+              <li className="flex items-center gap-2 text-sm text-white/80">
+                <span className="text-accent">✓</span> Dolazak isti dan
+              </li>
+              <li className="flex items-center gap-2 text-sm text-white/80">
+                <span className="text-accent">✓</span> Garancija na sve radove
+              </li>
+              <li className="flex items-center gap-2 text-sm text-white/80">
+                <span className="text-accent">✓</span> Cena poznata unapred
+              </li>
+              <li className="flex items-center gap-2 text-sm text-white/80">
+                <span className="text-accent">✓</span> Atestirana oprema i materijal
+              </li>
+            </ul>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={`tel:${settings.phone.replace(/\s/g, "")}`}
