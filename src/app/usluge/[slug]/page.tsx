@@ -114,23 +114,9 @@ export default async function UslugaDetailPage(
         }
       />
 
-      {/* Detaljan tekst */}
-      {page.body ? (
-        <section className="py-14">
-          <Container className="max-w-3xl">
-            <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
-              Sve što treba da znate
-            </span>
-            <div className="mt-2">
-              <RichText value={page.body} />
-            </div>
-          </Container>
-        </section>
-      ) : null}
-
       {/* Checklist */}
       {page.checklist.length > 0 && (
-        <section className="bg-surface py-10">
+        <section className="py-10">
           <Container>
             <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
               Šta uključuje
@@ -153,31 +139,78 @@ export default async function UslugaDetailPage(
         </section>
       )}
 
-      {/* CTA band */}
-      {page.ctaBandTitle && (
-        <section className="bg-accent py-14 text-navy">
+      {/* Pricing */}
+      {relatedServices.length > 0 && (
+        <section className="bg-surface py-14">
           <Container>
-            <h2 className="text-3xl font-bold">{page.ctaBandTitle}</h2>
-            {page.ctaBandText && (
-              <p className="mt-3 max-w-2xl text-navy/80">{page.ctaBandText}</p>
-            )}
-            <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
-              {page.ctaBandBullets.map((bullet, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <span className="mt-1 text-navy">✓</span>
-                  <span>{bullet}</span>
-                </div>
+            <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
+              Cene
+            </span>
+            <h2 className="mt-2 text-3xl font-bold text-navy">Cenovnik: {page.title.toLowerCase()}</h2>
+            <p className="mt-2 max-w-2xl text-sm text-muted">
+              Cene su orijentacione. Za tačnu ponudu prilagođenu vašem prostoru
+              pozovite {settings.phone}.
+            </p>
+            <div className="mt-8 space-y-2">
+              {relatedServices.map((service) => (
+                <ServiceRow key={service.slug} service={service} />
               ))}
             </div>
-            <a
-              href={`tel:${settings.phone.replace(/\s/g, "")}`}
-              className="mt-8 inline-block rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-navy-light"
+            <Link
+              href="/cenovnik"
+              className="mt-6 inline-block text-sm font-semibold text-accent-dark hover:underline"
             >
-              Pozovite {settings.phone}
-            </a>
+              Pogledajte kompletan cenovnik →
+            </Link>
           </Container>
         </section>
       )}
+
+      {/* CTA band */}
+      {page.ctaBandTitle && (
+        <section className="bg-white pb-12">
+          <Container>
+            <div className="flex flex-col items-start gap-5 rounded-2xl border border-accent/25 bg-accent/5 p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+              <div>
+                <h2 className="text-xl font-bold text-navy">{page.ctaBandTitle}</h2>
+                {page.ctaBandText && (
+                  <p className="mt-2 max-w-xl text-sm text-muted">{page.ctaBandText}</p>
+                )}
+                {page.ctaBandBullets.length > 0 && (
+                  <div className="mt-3 grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
+                    {page.ctaBandBullets.map((bullet, i) => (
+                      <div key={i} className="flex items-start gap-2 text-sm text-navy/80">
+                        <span className="mt-0.5 text-accent-dark">✓</span>
+                        <span>{bullet}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <a
+                href={`tel:${settings.phone.replace(/\s/g, "")}`}
+                className="shrink-0 rounded-full bg-navy px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-navy-light"
+              >
+                Pozovite {settings.phone}
+              </a>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Detaljan tekst */}
+      {page.body ? (
+        <section className="py-14">
+          <Container className="max-w-3xl">
+            <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
+              Sve što treba da znate
+            </span>
+            <div className="mt-2">
+              <RichText value={page.body} />
+            </div>
+          </Container>
+        </section>
+      ) : null}
 
       {/* Why us */}
       {page.whyUs.length > 0 && (
@@ -213,7 +246,7 @@ export default async function UslugaDetailPage(
 
       {/* FAQ — important for AEO (Answer Engine Optimization) */}
       {page.faq.length > 0 && (
-        <section className="bg-surface py-14">
+        <section className="py-14">
           <Container className="max-w-3xl">
             <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
               Najčešća pitanja
@@ -237,33 +270,6 @@ export default async function UslugaDetailPage(
                 </details>
               ))}
             </div>
-          </Container>
-        </section>
-      )}
-
-      {/* Pricing — grupisano po podgrupama, gušći prikaz */}
-      {relatedServices.length > 0 && (
-        <section className="py-14">
-          <Container>
-            <span className="text-sm font-semibold uppercase tracking-wide text-accent-dark">
-              Cene
-            </span>
-            <h2 className="mt-2 text-3xl font-bold text-navy">Cenovnik: {page.title.toLowerCase()}</h2>
-            <p className="mt-2 max-w-2xl text-sm text-muted">
-              Cene su orijentacione. Za tačnu ponudu prilagođenu vašem prostoru
-              pozovite {settings.phone}.
-            </p>
-            <div className="mt-8 space-y-2">
-              {relatedServices.map((service) => (
-                <ServiceRow key={service.slug} service={service} />
-              ))}
-            </div>
-            <Link
-              href="/cenovnik"
-              className="mt-6 inline-block text-sm font-semibold text-accent-dark hover:underline"
-            >
-              Pogledajte kompletan cenovnik →
-            </Link>
           </Container>
         </section>
       )}
