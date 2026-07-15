@@ -152,10 +152,21 @@ export default async function UslugaDetailPage(
               pozovite {settings.phone}.
             </p>
             <div className="mt-8 space-y-2">
-              {relatedServices.map((service) => (
+              {relatedServices.slice(0, 4).map((service) => (
                 <ServiceRow key={service.slug} service={service} />
               ))}
             </div>
+            {relatedServices.length > 4 && (
+              <div
+                className="mt-2 max-h-14 overflow-hidden"
+                style={{
+                  maskImage: "linear-gradient(to bottom, black, transparent)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
+                }}
+              >
+                <ServiceRow service={relatedServices[4]} />
+              </div>
+            )}
             <Link
               href="/cenovnik"
               className="mt-6 inline-block text-sm font-semibold text-accent-dark hover:underline"
