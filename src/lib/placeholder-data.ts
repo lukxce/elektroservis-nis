@@ -755,6 +755,7 @@ export type BlogPostItem = {
   summary: string;
   keyTakeaways: string[];
   publishedAt: string;
+  coverImageUrl?: string;
   body: unknown[];
   faq: { question: string; answer: string }[];
 };
@@ -775,6 +776,7 @@ export const blogPosts: BlogPostItem[] = [
       "Miris paljevine, čak i kratak i slab, zahteva odmah isključivanje i poziv električaru",
     ],
     publishedAt: "2026-02-14T09:00:00.000Z",
+    coverImageUrl: "/images/blog/znaci-da-je-instalacija-zastarela-i-opasna.webp",
     body: [
       p("Kod stana starijeg od tridesetak godina, stanje razvodne table u prvih nekoliko minuta pregleda otkriva veći deo onoga što treba znati o stanju cele instalacije. Evo šta se tačno proverava, i isto to možete sami pogledati pre nego što se pozove električar."),
       h2("Prvi znak: utičnice ili prekidači koji se greju"),
@@ -811,6 +813,7 @@ export const blogPosts: BlogPostItem[] = [
       "Nikad ne premošćavajte ili blokirajte osigurač da bi prestao da ispada, to je direktan rizik od požara"
     ],
     publishedAt: "2026-03-05T09:00:00.000Z",
+    coverImageUrl: "/images/blog/zasto-osiguraci-stalno-ispadaju.webp",
     body: [
       p("Osigurač koji „stalno ispada” jedan je od najčešćih razloga za poziv električaru, a pitanje da li treba brinuti zavisi od uzroka. U nastavku je objašnjeno po čemu se razlikuje bezazlen slučaj preopterećenja od ozbiljnijeg kvara koji zahteva hitan izlazak."),
       h2("Prvo, koja vrsta osigurača vam ispada"),
@@ -855,6 +858,7 @@ export const blogPosts: BlogPostItem[] = [
       "Najveći rizik kod samostalnog rada nije trenutna greška, nego skriveni nedostatak koji se otkrije godinama kasnije",
     ],
     publishedAt: "2026-04-01T09:00:00.000Z",
+    coverImageUrl: "/images/blog/da-li-je-samostalan-elektricarski-rad-legalan-i-bezbedan.webp",
     body: [
       p("Pitanje „mogu li ovo sam da uradim, ili je pametnije pozvati nekoga” jedno je od najčešćih kod manjih elektro intervencija. Odgovor zavisi od toga o kakvom se poslu radi, a u nastavku je povučena realna, praktična granica, ne samo formalna."),
       h2("Šta je uobičajeno i relativno bezbedno samostalno raditi"),
