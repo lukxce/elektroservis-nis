@@ -893,6 +893,7 @@ export const blogPosts: BlogPostItem[] = [
       "Pisani nalaz je koristan alat u pregovorima o ceni, ne samo informacija za sebe",
     ],
     publishedAt: "2026-04-22T09:00:00.000Z",
+    coverImageUrl: "/images/blog/sta-proveravam-pri-pregledu-instalacije-pre-kupovine-stana.webp",
     body: [
       p("Pregled instalacije pre kupovine stana radi se isključivo u interesu kupca, ne prodavca ili agencije, i to je važno naglasiti unapred. Nalaz mora biti iskren, čak i kad to znači da će kupac na osnovu njega tražiti popust ili odustati od kupovine."),
       h2("Prvi korak: razgovor i osnovne informacije"),
@@ -929,6 +930,7 @@ export const blogPosts: BlogPostItem[] = [
       "Dobar električar objašnjava šta i zašto radi, ne izbegava pitanja",
     ],
     publishedAt: "2026-05-10T09:00:00.000Z",
+    coverImageUrl: "/images/blog/kako-izabrati-elektricara-pitanja-koja-treba-postaviti.webp",
     body: [
       p("Kad je potrebna preporuka električara u drugom gradu, koristan je isti set pitanja koji bi trebalo postaviti svakom izvođaču kome se poverava sopstvena instalacija. Ne postoji jedinstven „pravi” odgovor na svako od ovih pitanja, ali način na koji neko odgovara govori mnogo o njegovoj ozbiljnosti."),
       h2("Da li izdaje račun i garanciju na izveden posao"),
@@ -965,6 +967,7 @@ export const blogPosts: BlogPostItem[] = [
       "Rezervne cevi (prazne instalacione cevi) tokom renoviranja su jeftin način da se olakšaju buduće izmene",
     ],
     publishedAt: "2026-06-08T09:00:00.000Z",
+    coverImageUrl: "/images/blog/priprema-instalacije-za-renoviranje.webp",
     body: [
       p("Najčešća greška kod renoviranja nije loše izveden elektro rad, nego elektro rad koji je isplaniran prekasno, kad su zidovi već zagletovani i obojeni, i kad svaka izmena znači ponovno bušenje i prljavštinu. U nastavku je opisan redosled preporučen svima koji planiraju veće renoviranje."),
       h2("Korak jedan: procena postojeće instalacije, pre nego što odlučite šta menjate"),
@@ -984,6 +987,41 @@ export const blogPosts: BlogPostItem[] = [
       { question: "Da li je jeftinije raditi elektro instalaciju tokom renoviranja ili posle?", answer: "Znatno je jeftinije tokom renoviranja, dok su zidovi već otvoreni za druge radove. Naknadna izmena gotovog zida uvek podrazumeva dodatni trošak bušenja, gletovanja i farbanja." },
       { question: "Koliko unapred treba pozvati električara u odnosu na početak renoviranja?", answer: "Preporučujemo kontakt čim imate gotov idejni raspored prostorija, obično dve do četiri nedelje pre planiranog početka radova, kako bismo stigli da se uklopimo u vaš raspored izvođača." },
       { question: "Da li vredi postavljati prazne cevi za buduće linije?", answer: "Da, to je jeftina investicija koja olakšava buduće izmene bez ponovnog otvaranja zida, i preporučuje se kod svakog većeg renoviranja." },
+    ],
+  },
+  {
+    slug: "boje-instalacionih-zica-sta-treba-da-znate",
+    title: "Boje instalacionih žica: šta svako treba da zna",
+    category: "bezbednost",
+    excerpt:
+      "Braon, plava, žuto-zelena. Boje provodnika nisu estetski izbor, nego bezbednosni standard koji vam govori šta je pod naponom pre nego što uopšte dodirnete žicu.",
+    summary:
+      "Savremeni standard predviđa braon, crnu ili sivu boju za fazni provodnik, plavu za neutralni i žuto-zelenu kombinaciju isključivo za zaštitno uzemljenje. Problem nastaje kod starijih instalacija, gde se boje ne poklapaju uvek sa današnjim standardom, zbog čega se boja provodnika nikad ne sme koristiti kao jedini dokaz da žica nije pod naponom.",
+    keyTakeaways: [
+      "Braon, crna ili siva boja označava fazni provodnik, plava neutralni, žuto-zelena isključivo zaštitno uzemljenje",
+      "Starije instalacije, posebno one iz perioda pre devedesetih, često ne prate ovaj standard",
+      "Boja provodnika je orijentir, ne dokaz. Pre bilo kakvog dodira uvek proverite testerom napona",
+      "Trofazne instalacije imaju tri različito obojena fazna provodnika, a sva tri su podjednako opasna",
+    ],
+    publishedAt: "2026-07-10T09:00:00.000Z",
+    coverImageUrl: "/images/blog/boje-instalacionih-zica-sta-treba-da-znate.webp",
+    body: [
+      p("Boje izolacije na instalacionim žicama nisu proizvoljne, one prate standard koji postoji upravo zato da bi svako, od električara do vlasnika stana koji menja prekidač, mogao da prepozna ulogu svakog provodnika pre nego što ga dodirne. Problem je što se taj standard menjao kroz decenije, pa boja sama po sebi nikad ne sme biti jedini dokaz da žica nije pod naponom."),
+      h2("Savremeni standard: šta koja boja znači"),
+      p("Prema važećem standardu koji se primenjuje i u novim instalacijama u Srbiji, braon, crna ili siva boja izolacije označava fazni provodnik, onaj koji je pod naponom kad je strujno kolo aktivno. Plava boja je rezervisana za neutralni provodnik, koji struju vraća nazad ka izvoru. Žuto-zelena kombinacija, prepoznatljive naizmenične pruge, koristi se isključivo za zaštitni provodnik, odnosno uzemljenje, i ne sme se koristiti ni za šta drugo, čak ni u privremenim instalacijama."),
+      h2("Zašto starije instalacije odstupaju od ovoga"),
+      p("Instalacije rađene pre devedesetih godina, a mnoge u Nišu i dalje jesu te starosti, često ne prate današnji standard boja. Nekada se crvena koristila za fazu, a plava nije bila strogo rezervisana za neutralni provodnik. Dodatni problem je fizičko starenje izolacije, gde toplota i vreme izbeljuju ili zatamnjuju boju do te mere da je teško sa sigurnošću reći koja je originalno bila. U takvim slučajevima oslanjanje na boju je direktan rizik, ne pomoć."),
+      h2("Zašto boja nikad nije dovoljan dokaz"),
+      p("Čak i u potpuno novoj instalaciji, boja provodnika govori šta je taj provodnik trebalo da bude, ne šta jeste u datom trenutku. Greška pri povezivanju, bilo od strane prethodnog izvođača ili nekog ko je naknadno intervenisao, može ostaviti fazni provodnik obojen kao neutralni. Zato je pravilo jednostavno, pre bilo kakvog dodira provodnika, čak i kad izgleda isključeno, potrebno je proveriti testerom napona ili multimetrom, ne osloniti se samo na boju izolacije."),
+      h2("Trofazne instalacije: tri faze, tri boje, isti rizik"),
+      p("Kod trofaznih priključaka, uobičajenih za kuće, veće stanove sa elektro bojlerima ili poslovni prostor, sve tri fazne linije nose različite boje, najčešće braon, crnu i sivu, kako bi se razlikovale jedna od druge radi ravnomernog opterećenja i lakšeg povezivanja uređaja. Bitno je razumeti da su sve tri podjednako opasne, razlika u boji postoji radi organizacije ožičenja, ne radi bezbednosti pojedinačne linije."),
+      h2("Kad boja uvezene opreme ne prati domaći standard"),
+      p("Rasveta i uređaji uvezeni sa tržišta koja koriste drugačiji standard, na primer iz Severne Amerike, mogu imati potpuno drugačiju šemu boja na sopstvenim kablovima, gde crna često označava fazu, a bela neutralni provodnik. Kod povezivanja takve opreme na domaću instalaciju nije dovoljno uparivati boje po sećanju, potrebno je proveriti deklaraciju proizvođača ili prepustiti povezivanje električaru koji zna na šta da obrati pažnju."),
+    ],
+    faq: [
+      { question: "Da li mogu da se oslonim na boju žice da znam da je bezbedna za dodir?", answer: "Ne. Boja govori koja je uloga provodnika trebalo da bude, ne garantuje trenutno stanje. Uvek proverite testerom napona ili multimetrom pre dodira, bez obzira na boju." },
+      { question: "Zašto moja stara instalacija ima drugačije boje žica od onoga što piše na internetu?", answer: "Verovatno je rađena pre uvođenja današnjeg standarda boja, kada su se braon, crvena i plava koristile drugačije nego danas. To je uobičajeno kod instalacija starijih od tridesetak godina." },
+      { question: "Da li je žuto-zelena žica uvek uzemljenje?", answer: "Da, ta kombinacija je po standardu rezervisana isključivo za zaštitni provodnik i ne bi trebalo da se koristi za fazu ili neutralni provodnik ni u jednoj ispravno izvedenoj instalaciji." },
     ],
   },
 ];
