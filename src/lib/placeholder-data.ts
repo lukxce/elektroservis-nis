@@ -29,7 +29,7 @@ export const siteSettings = {
   phone: "063 133 7373",
   phoneSecondary: "018 452 891",
   email: "kontakt@niselektricar.rs",
-  address: "Bulevar Nemanjića 44, Niš",
+  address: "Ćuprijska 33, Niš",
   city: "Niš",
   serviceAreas: ["Niš", "Niška Banja", "Medijana", "Pantelej", "Crveni Krst"],
   workingHours: "Pon–Pet: 07–19h, Sub: 08–15h",
@@ -46,8 +46,7 @@ export const siteSettings = {
       closes: "15:00",
     },
   ],
-  // Približne koordinate centra Niša: zameniti tačnom geo-lokacijom adrese firme.
-  geo: { lat: 43.3209, lng: 21.8958 },
+  geo: { lat: 43.3229, lng: 21.9291 },
   trustBadges: [
     "Uredna i temeljna izvedba",
     "Dolazak isti dan",
