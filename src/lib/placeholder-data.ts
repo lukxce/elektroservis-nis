@@ -55,6 +55,8 @@ export const siteSettings = {
     "Brz odziv na hitne pozive",
     "Atestirane instalacije",
   ],
+  heroImageUrl: "/images/hero.webp",
+  aboutImageUrl: "/images/about.webp",
 };
 
 export type ServiceItem = {
@@ -622,6 +624,7 @@ export const servicePages: ServicePageItem[] = [
     title: "Servis kućnih uređaja",
     heroSubtitle:
       "Servis i popravka bojlera, šporeta, veš mašina i TA peći, električni deo kvara, dijagnostika na licu mesta.",
+    imageUrl: "/images/usluge/servis-uredjaja.webp",
     body: [
       p("Vršimo servis i popravku bojlera, šporeta, veš mašina i TA peći, sa fokusom na električni deo kvara i dijagnostiku na licu mesta. Usluga obuhvata proveru uređaja, lociranje kvara i, gde je to moguće, popravku bez odnošenja uređaja u servis. Radove prilagođavamo tipu i starosti uređaja."),
       h2("Dijagnostika i popravka kućnih uređaja"),
@@ -663,6 +666,7 @@ export const servicePages: ServicePageItem[] = [
     title: "Ugradnja i servis klima uređaja",
     heroSubtitle:
       "Montaža novih klima uređaja, redovan servis i dopuna freona, uz elektro priključak izveden po propisima.",
+    imageUrl: "/images/usluge/klima-uredjaji.webp",
     body: [
       p("Vršimo ugradnju, servis i održavanje klima uređaja u stambenim i poslovnim objektima. Usluga obuhvata elektro pripremu, montažu unutrašnje i spoljne jedinice, redovno čišćenje i dopunu freona po potrebi. Radove izvodimo u skladu sa preporukama proizvođača i važećim propisima."),
       h2("Ugradnja i elektro priprema"),
@@ -704,6 +708,7 @@ export const servicePages: ServicePageItem[] = [
     title: "Ugradnja EV punjača",
     heroSubtitle:
       "Postavljanje kućnih punjača za električna vozila, sa posebnim vodom i osiguračem prilagođenim snazi punjenja.",
+    imageUrl: "/images/usluge/ev-punjaci.webp",
     body: [
       p("Vršimo ugradnju kućnih punjača za električna vozila, sa posebnim vodom i osiguračem prilagođenim snazi punjenja. Usluga obuhvata proveru priključne snage objekta, izbor odgovarajuće trase i montažu punjača u garaži, dvorištu ili na prilazu. Radove prilagođavamo tipu punjača i postojećoj instalaciji."),
       h2("Priprema instalacije i montaža"),
