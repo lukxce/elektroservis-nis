@@ -436,6 +436,7 @@ export type ServicePageItem = {
   slug: string;
   title: string;
   heroSubtitle: string;
+  imageUrl?: string;
   body: unknown[];
   checklist: { title: string; description: string }[];
   ctaBandTitle: string;
@@ -451,6 +452,7 @@ export const servicePages: ServicePageItem[] = [
     title: "Elektroinstalacije",
     heroSubtitle:
       "Nova instalacija za stanove, kuće i poslovni prostor, izvedena po pravilima struke i spremna za tehnički prijem.",
+    imageUrl: "/images/usluge/elektroinstalacije.webp",
     body: [
       p("Vršimo izradu novih i adaptaciju postojećih elektroinstalacija u stambenim i poslovnim objektima. Radovi obuhvataju sve faze, od planiranja rasporeda tačaka i postavljanja kablova do montaže razvodne table, utičnica i prekidača. Svaki posao radimo u skladu sa tehničkim standardima i dogovorenim rokovima."),
       h2("Nova instalacija i adaptacija postojeće"),
@@ -494,6 +496,7 @@ export const servicePages: ServicePageItem[] = [
     title: "Ugradnja rasvete",
     heroSubtitle:
       "Montaža plafonjera, spot rasvete, LED traka i spoljašnjih svetiljki, sa urednim povezivanjem i testiranjem svake tačke.",
+    imageUrl: "/images/usluge/rasveta.webp",
     body: [
       p("Vršimo ugradnju svih vrsta rasvete u stambenim i poslovnim objektima, od klasičnih plafonjera do LED sistema i spoljašnjeg osvetljenja. Usluga obuhvata montažu, povezivanje i proveru svake tačke pod naponom. Radove prilagođavamo tipu plafona, zida i planiranoj snazi rasvete."),
       h2("Montaža i tipovi rasvete"),
@@ -535,6 +538,7 @@ export const servicePages: ServicePageItem[] = [
     title: "Osigurači i table",
     heroSubtitle:
       "Zamena dotrajalih osigurača, ugradnja zaštitnih sklopki i modernizacija razvodnog ormana po važećim propisima.",
+    imageUrl: "/images/usluge/osiguraci-i-table.webp",
     body: [
       p("Vršimo zamenu dotrajalih osigurača, ugradnju zaštitnih sklopki i modernizaciju razvodnog ormana u stambenim i poslovnim objektima. Radovi se izvode u skladu sa važećim propisima i prilagođavaju se broju strujnih krugova i stanju postojeće instalacije. Svaka intervencija se planira tako da prekid napajanja traje što kraće."),
       h2("Stanje razvodne table i zaštita"),
@@ -576,6 +580,7 @@ export const servicePages: ServicePageItem[] = [
     title: "Utičnice i prekidači",
     heroSubtitle:
       "Ugradnja, zamena i dopuna utičnica i prekidača u stanovima, kućama i poslovnom prostoru, po propisima za svaki tip prostorije.",
+    imageUrl: "/images/usluge/uticnice-i-prekidaci.webp",
     body: [
       p("Vršimo ugradnju, zamenu i dopunu utičnica i prekidača u stambenim i poslovnim objektima, u skladu sa propisima koji se primenjuju za svaki tip prostorije. Usluga obuhvata i pojedinačnu zamenu i veće pakete radova prilikom renoviranja. Poseban akcenat stavljamo na vlažne prostore i uređaje veće snage koji zahtevaju dodatnu zaštitu."),
       h2("Kada je potrebna zamena ili dopuna"),
