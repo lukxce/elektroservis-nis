@@ -26,9 +26,9 @@ function bullets(items: string[]) {
 export const siteSettings = {
   title: "Elektro Servis Niš",
   tagline: "Montaža, servis i popravka električnih instalacija u Nišu",
-  phone: "065 847 2193",
+  phone: "063 133 7373",
   phoneSecondary: "018 452 891",
-  email: "info@elektroservisnis.rs",
+  email: "kontakt@niselektricar.rs",
   address: "Bulevar Nemanjića 44, Niš",
   city: "Niš",
   serviceAreas: ["Niš", "Niška Banja", "Medijana", "Pantelej", "Crveni Krst"],
