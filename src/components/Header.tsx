@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Container } from "@/components/Container";
@@ -39,8 +40,9 @@ export async function Header() {
         <div className="flex justify-start">
           <MobileMenu serviceLinks={serviceLinks} navLinks={navLinks} />
         </div>
-        <Link href="/" className="truncate text-center text-base font-bold text-navy">
-          {settings.title}
+        <Link href="/" className="flex min-w-0 items-center justify-center gap-2 text-base font-bold text-navy">
+          <Image src="/images/logo.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0" />
+          <span className="truncate">{settings.title}</span>
         </Link>
         <div className="flex justify-end">
           <Link
@@ -54,7 +56,8 @@ export async function Header() {
 
       {/* Desktop red */}
       <Container className="hidden items-center justify-between py-4 md:flex">
-        <Link href="/" className="text-lg font-bold text-navy">
+        <Link href="/" className="flex items-center gap-2 text-lg font-bold text-navy">
+          <Image src="/images/logo.png" alt="" width={32} height={32} className="h-8 w-8" />
           {settings.title}
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium text-navy">

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 import { getSiteSettings } from "@/lib/data";
 
-export const alt = "Elektro Servis Niš";
+export const alt = "Električar Niš";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
