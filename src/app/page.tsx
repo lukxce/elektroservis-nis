@@ -16,8 +16,8 @@ import { SITE_URL } from "@/lib/site-config";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
-  const title = `Električar ${settings.city} | Montaža, servis i popravka instalacija`;
-  const description = `Montaža, servis, popravka i dijagnostika električnih instalacija u ${settings.city}u i okolini. Dolazak isti dan, garancija na rad. Pozovite ${settings.phone}.`;
+  const title = `Električar ${settings.city} - odmah dostupan električar na teritoriji ${settings.city}a`;
+  const description = `Električar ${settings.city} pruža usluge montaže, servisa, popravke i dijagnostike instalacija u ${settings.city}u i okolini, dolazak isti dan, garancija na rad. Pozovite ${settings.phone}.`;
 
   return {
     title: { absolute: title },
