@@ -140,6 +140,63 @@ export default async function CenovnikPage() {
 
       <CenovnikFilters services={services} categoryOrder={categoryOrder} phone={settings.phone} />
 
+      {/* Niš vs Beograd pricing comparison */}
+      <section className="py-14">
+        <Container className="max-w-3xl">
+          <span className="font-mono text-sm font-semibold uppercase tracking-wide text-accent">Poređenje</span>
+          <h2 className="mt-2 text-3xl font-bold text-navy">Cene u Nišu naspram Beograda</h2>
+          <p className="mt-4 text-muted">
+            Elektroinstalaterski radovi u {settings.city}u su osetno povoljniji nego u Beogradu.
+            Beogradski prosek za kompletnu instalaciju je 10 do 15 EUR po kvadratnom metru samo
+            za rad, bez materijala, odnosno 25 do 50 EUR po kvadratnom metru sa materijalom.
+            U {settings.city}u, iste usluge koštaju oko 30 do 40 posto manje, jer su troškovi
+            poslovanja niži, dok su kvalitet kabla, opreme i rad po istim propisima.
+          </p>
+          <div className="mt-6 overflow-x-auto rounded-lg border border-black/10">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-black/10 bg-surface">
+                  <th className="px-4 py-3 text-left font-semibold text-navy">Usluga</th>
+                  <th className="px-4 py-3 text-right font-semibold text-navy">{settings.city}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-navy">Beograd (prosek)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-black/5">
+                <tr>
+                  <td className="px-4 py-3 text-muted">Zamena utičnice</td>
+                  <td className="px-4 py-3 text-right font-medium text-navy">od 1.200 din</td>
+                  <td className="px-4 py-3 text-right text-muted">1.800 - 2.500 din</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-muted">Zamena razvodne table</td>
+                  <td className="px-4 py-3 text-right font-medium text-navy">9.000 - 16.000 din</td>
+                  <td className="px-4 py-3 text-right text-muted">15.000 - 25.000 din</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-muted">Nova instalacija (m2, samo rad)</td>
+                  <td className="px-4 py-3 text-right font-medium text-navy">1.900 - 2.600 din</td>
+                  <td className="px-4 py-3 text-right text-muted">2.500 - 3.500 din</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-muted">Ugradnja FID sklopke</td>
+                  <td className="px-4 py-3 text-right font-medium text-navy">od 3.200 din</td>
+                  <td className="px-4 py-3 text-right text-muted">4.500 - 6.000 din</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 text-muted">Servis bojlera</td>
+                  <td className="px-4 py-3 text-right font-medium text-navy">2.500 - 4.000 din</td>
+                  <td className="px-4 py-3 text-right text-muted">4.000 - 6.000 din</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs text-muted">
+            Beogradske cene su okvirne, zasnovane na proseku ponuda na tržištu u 2026. godini.
+            Cene u {settings.city}u su iz našeg aktuelnog cenovnika.
+          </p>
+        </Container>
+      </section>
+
       <section className="bg-surface py-14">
         <Container className="max-w-3xl">
           <span className="font-mono text-sm font-semibold uppercase tracking-wide text-accent">Pitanja o ceni</span>
