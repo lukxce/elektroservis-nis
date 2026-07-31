@@ -1145,6 +1145,7 @@ export const blogPosts: BlogPostItem[] = [
       "Tip A pokriva i jednosmerne komponente, tip AC samo naizmenične",
       "Ugradnja u postojeću tablu u Nišu košta od 4500 do 7500 dinara sa materijalom",
     ],
+    coverImageUrl: "/images/blog/sta-je-fid-sklopka-i-zasto-je-obavezna.webp",
     publishedAt: "2026-07-30T09:00:00.000Z",
     body: [
       p("FID sklopka je uređaj koji vam može spasiti život, a većina ljudi ne zna da li je uopšte ima u svojoj razvodnoj tabli. U praksi, njen posao je jednostavan: ako struja počne da curi tamo gde ne bi trebalo, kroz oštećenu izolaciju, vlažan zid ili, u najgorem slučaju, kroz vaše telo, FID to detektuje i isključi struju pre nego što udar postane opasan. Vreme reakcije je ispod četrdeset milisekundi, brže nego što nervni sistem stigne da registruje bol."),
