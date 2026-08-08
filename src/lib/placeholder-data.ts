@@ -1193,6 +1193,7 @@ export const blogPosts: BlogPostItem[] = [
       "Beograd naplaćuje rad 10 do 15 evra po kvadratu, Niš je jeftiniji, oko 7 do 10 evra po kvadratu",
     ],
     publishedAt: "2026-08-05T09:00:00.000Z",
+    coverImageUrl: "/images/blog/koliko-kosta-zamena-elektro-instalacije-u-stanu-u-nisu.webp",
     body: [
       p("Zamena elektro instalacije je jedan od onih poslova gde je „zavisi” tehnički tačan, ali beskoristan odgovor. U ovom tekstu su konkretni iznosi za tri najčešća tipa stana u Nišu, sa razlaganjem na stavke koje čine ukupnu cenu, i poređenjem sa Beogradom, jer se to pitanje redovno postavlja ljudima koji su se doselili ili prodaju nekretninu preko granice grada."),
       h2("Šta ulazi u kompletnu zamenu instalacije"),
@@ -1255,6 +1256,7 @@ export const blogPosts: BlogPostItem[] = [
       "Standardna ugradnja traje jedan radni dan, ako instalacija to dozvoljava bez dodatnih zahvata",
     ],
     publishedAt: "2026-08-06T09:00:00.000Z",
+    coverImageUrl: "/images/blog/ugradnja-ev-punjaca-kod-kuce-sta-treba-znati.webp",
     body: [
       p("Sve više klijenata u Nišu nas zove tek pošto je auto već poručen ili čak stigao, sa pitanjem koliko brzo možemo da ugradimo kućni punjač. Odgovor je skoro uvek isti: brzo, ako instalacija to dozvoljava, a to se saznaje tek na licu mesta. Ovaj tekst je vodič kroz ono što vredi proveriti pre kupovine automobila, ne posle, jer nekoliko pitanja unapred može uštedeti i vreme i novac."),
       h2("Zašto je redosled bitan"),
