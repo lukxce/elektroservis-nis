@@ -22,6 +22,21 @@ function bullets(items: string[]) {
     children: [{ _type: "span", text }],
   }));
 }
+// Paragraf sa jednim ugrađenim linkom (npr. ka stranici usluge), po Portable
+// Text konvenciji za markDefs/marks.
+function pLink(before: string, linkText: string, href: string, after = "") {
+  const children = [
+    { _type: "span", text: before },
+    { _type: "span", text: linkText, marks: ["link1"] },
+  ];
+  if (after) children.push({ _type: "span", text: after });
+  return {
+    _type: "block",
+    style: "normal",
+    children,
+    markDefs: [{ _type: "link", _key: "link1", href }],
+  };
+}
 
 export const siteSettings = {
   title: "Električar Niš",
@@ -1297,6 +1312,128 @@ export const blogPosts: BlogPostItem[] = [
       { question: "Koliko traje ugradnja standardnog kućnog punjača?", answer: "Za kratku trasu i dovoljnu priključnu snagu, jedan radni dan: provera, provlačenje linije, ugradnja zaštitne sklopke i montaža punjača." },
       { question: "Da li mogu da priključim punjač na postojeću jaku utičnicu, na primer onu za šporet?", answer: "Ne preporučuje se. Punjač zahteva sopstvenu liniju sa odgovarajućim osiguračem i zaštitnom sklopkom, ne deljenje voda sa drugim uređajem, zbog dužine i konstantnosti opterećenja koje punjenje automobila stvara." },
       { question: "Da li treba da proverim priključnu snagu pre ili posle kupovine auta?", answer: "Pre, ako je moguće. Provera je besplatna i brza, a saznanje da priključak nije dovoljan pre kupovine ostavlja vreme da se to reši sa distributerom, umesto da se otkrije tek kad punjač već stoji u kutiji." },
+    ],
+  },
+  {
+    slug: "sta-je-uzemljenje-i-zasto-je-obavezno",
+    title: "Šta je uzemljenje i zašto je obavezno u svakom stanu",
+    category: "bezbednost",
+    excerpt:
+      "Uzemljenje je jedna od onih stavki koje se ne vide dok ne zatreba, a tad je već kasno da se pita da li postoji. Evo šta zapravo radi i kako sami da proverite da li ga imate.",
+    summary:
+      "Uzemljenje obezbeđuje siguran put kojim struja curenja odlazi u zemlju umesto kroz telo osobe koja dodirne neispravan uređaj. Bez njega, oštećena izolacija na kućištu aparata može da ga pretvori u provodnik pod naponom, a osetljiva elektronika ostaje bez zaštite od prenapona. Postoji nekoliko jednostavnih načina da proverite da li vaš stan ima uzemljenje, od izgleda utičnice do jeftinog test utikača, ali za pouzdanu potvrdu i za atest potrebno je stručno merenje.",
+    keyTakeaways: [
+      "Uzemljenje daje struji curenja siguran put ka zemlji, umesto kroz telo osobe koja dodirne neispravan uređaj",
+      "Šuko utičnica sa dva bočna metalna kontakta je znak da linija ima uzemljenje, ali to nije stopostotna potvrda",
+      "Jeftin test utikač daje orijentacionu proveru, stručno merenje otpora uzemljenja daje tačan i merljiv rezultat",
+      "Atest je obavezan za novogradnju, često se traži pri prodaji nekretnine i kod prijave štete osiguranju",
+      "Uzemljenje i FID sklopka rade zajedno, jedno ne zamenjuje drugo",
+    ],
+    publishedAt: "2026-08-13T09:00:00.000Z",
+    coverImageUrl: "/images/blog/sta-je-uzemljenje-i-zasto-je-obavezno.webp",
+    body: [
+      p("Uzemljenje je jedna od onih stavki u instalaciji koje niko ne primećuje dok sve radi kako treba, a onda postane jedino bitno pitanje u trenutku kad nešto pođe po zlu. U nastavku objašnjavam šta uzemljenje zapravo radi, kako sami da proverite da li ga vaš stan ima, i kada vam treba zvaničan atest."),
+      h2("Šta uzemljenje zapravo radi"),
+      p("Svaki metalni deo kućišta uređaja, mašina za veš, bojler, šporet, u ispravnom stanju ne bi trebalo da bude pod naponom. Problem nastaje kad se izolacija unutar uređaja ošteti i fazni provodnik dođe u kontakt sa metalnim kućištem. Bez uzemljenja, to kućište postaje provodnik pod naponom, a prva osoba koja ga dodirne i istovremeno je u kontaktu sa zemljom, na primer bosim nogama na pločicama, postaje put kojim struja teče."),
+      p("Uzemljenje rešava taj problem tako što spaja metalno kućište uređaja sa zemljom preko provodnika mnogo manjeg otpora nego što ga ima ljudsko telo. Struja curenja instinktivno bira put najmanjeg otpora, pa umesto kroz osobu, najveći deo te struje ode kroz uzemljenje. To istovremeno izazove veliki skok struje na toj liniji, dovoljan da osigurač ili FID sklopka odmah reaguju i isključe napajanje."),
+      h2("Zašto je ovo pitanje bezbednosti, ne samo tehnički detalj"),
+      ...bullets([
+        "Rizik od strujnog udara: bez uzemljenja, telo osobe može postati primarni put struje curenja, sa ozbiljnim ili smrtonosnim posledicama",
+        "Oštećenje osetljive elektronike: uzemljenje takođe pomaže odvodu prenapona, na primer pri udaru groma u blizini, pa njegov nedostatak povećava rizik da računar, televizor ili druga elektronika stradaju pri iznenadnom skoku napona",
+        "Rizik od požara: struja curenja koja nema uređen put ka zemlji može duže cirkulisati kroz instalaciju nego što bi trebalo, zagrevajući provodnike i spojeve na mestima koja nisu projektovana za to",
+      ]),
+      p("Važno je razumeti da uzemljenje i FID zaštitna sklopka nisu ista stvar, iako rade najbolje zajedno. FID sklopka meri razliku struje i isključuje kolo kad otkrije curenje, dok uzemljenje daje toj struji curenja put najmanjeg otpora da uopšte ne prođe kroz telo. FID može donekle da radi i bez uzemljenja, ali sporije i manje pouzdano, jer mu nedostaje taj brz, predvidiv put kojim se struja curenja usmerava."),
+      h2("Kako sami da proverite da li vaš stan ima uzemljenje"),
+      h3("Pogledajte izgled utičnice"),
+      p("Standardna šuko utičnica koja ima uzemljenje prepoznaje se po dva metalna kontakta sa strane, gore i dole od otvora za utikač, koji dodiruju odgovarajuće kontakte na utikaču. Ako je vaša utičnica starijeg tipa, bez tih bočnih kontakata, samo sa dve rupice, velika je verovatnoća da ta linija nema uzemljenje. Ovo je brza vizuelna provera, ali nije konačan dokaz, jer utičnica može imati odgovarajući oblik, a da provodnik uzemljenja iza zida nije stvarno povezan ili je prekinut."),
+      h3("Koristite jeftin test utikač"),
+      p("U prodavnicama alata i elektro opreme postoje mali test utikači sa nekoliko LED lampica, koji se jednostavno utaknu u utičnicu i kombinacijom upaljenih ili ugašenih lampica pokazuju da li postoji faza, nula i uzemljenje, i da li su ispravno raspoređeni. Ovo je koristan, jeftin alat za brzu orijentacionu proveru svake utičnice u stanu, ali ne meri kvalitet uzemljenja, samo njegovo prisustvo."),
+      h3("Zatražite stručno merenje otpora uzemljenja"),
+      p("Za pouzdanu potvrdu, uzemljenje se meri specijalizovanim instrumentom koji daje tačnu vrednost otpora u omima. Ova vrednost mora biti ispod propisane granice da bi se uzemljenje smatralo ispravnim. Merenje otpora uzemljenja je i deo standardnog postupka pri izdavanju atesta, i preporučuje se svakih nekoliko godina, čak i kad sumnje nema, jer se otpor uzemljivača vremenom menja usled korozije ili promene vlažnosti zemljišta oko njega."),
+      h2("Šta ako pregled pokaže da nemate uzemljenje"),
+      pLink(
+        "Kod starijih zgrada u Nišu, posebno onih građenih pre osamdesetih godina, nedostatak uzemljenja je čest nalaz, ne izuzetak. Rešenje je izrada novog sistema uzemljenja, što obuhvata postavljanje uzemljivača u zemlju ili temelj objekta i povezivanje sa razvodnim ormanom i svim uzemljenim tačkama u stanu. Ovo je posao koji radimo u sklopu naših ",
+        "elektroinstalacionih usluga",
+        "/usluge/elektroinstalacije",
+        ", i ne mora nužno da se radi zajedno sa kompletnom zamenom instalacije, može i kao samostalan zahvat na postojećoj instalaciji.",
+      ),
+      h2("Kada vam treba zvaničan atest"),
+      p("Atest, odnosno izveštaj o ispitivanju električne instalacije koji izdaje ovlašćeno lice, nije isto što i sopstvena provera test utikačem. To je zvanična dokumentacija sa merenjima koja se u nekoliko situacija praktično traži:"),
+      ...bullets([
+        "Kod novogradnje i tehničkog prijema objekta, gde je atest obavezan deo dokumentacije pre useljenja",
+        "Kod prodaje ili kupovine nekretnine, kao dodatna sigurnost i argument u pregovorima o ceni",
+        "Kod prijave štete osiguranju, posebno ako je šteta nastala usled požara ili kvara povezanog sa instalacijom, jer polisa može zahtevati dokaz da je instalacija bila u ispravnom stanju",
+        "Posle veće rekonstrukcije koja je zahvatila razvodni orman ili deo instalacije",
+        "Kad kupujete stan star nekoliko decenija i želite jasnu sliku stanja pre nego što se doselite",
+      ]),
+      p("U praksi, atest je jeftina investicija u odnosu na ono što potvrđuje ili otkriva. Ako je sve u redu, imate papir koji to dokazuje kad god zatreba. Ako nešto nije u redu, saznajete to na vreme, ne posle nesreće ili odbijene isplate štete."),
+      h2("Uzemljenje nije nešto što se „vidi” dok radi"),
+      p("Za razliku od pregorele sijalice ili osigurača koji ispadne, uzemljenje ne daje nikakav vidljiv znak da postoji ili da radi ispravno, sve dok se ne desi kvar, a tad je već kasno da se pita. Zato je provera nešto što vredi uraditi unapred, posebno u starijem stanu čije poreklo instalacije ne poznajete pouzdano, umesto da se saznanje odloži do trenutka kad ga zaista zatreba."),
+    ],
+    faq: [
+      { question: "Da li svaka utičnica sa uzemljenim izgledom stvarno ima uzemljenje?", answer: "Ne nužno. Oblik utičnice pokazuje da je predviđena za uzemljenje, ali ne garantuje da je provodnik iza zida stvarno povezan i ispravan. Za sigurnu potvrdu potreban je test utikač ili, još pouzdanije, stručno merenje." },
+      { question: "Koliko košta izrada uzemljenja za stan koji ga nema?", answer: "Zavisi od tipa terena i dužine potrebnog uzemljivača, okvirno od 18.000 do 35.000 dinara. Tačna cena se određuje nakon pregleda na licu mesta." },
+      { question: "Da li mi treba uzemljenje ako imam FID sklopku?", answer: "Da. FID sklopka i uzemljenje rade najbolje zajedno, ne zamenjuju jedno drugo. FID bez uzemljenja i dalje pruža određenu zaštitu, ali sporiju i manje pouzdanu nego kombinacija oba." },
+      { question: "Koliko često treba meriti otpor uzemljenja?", answer: "Preporuka je merenje na svakih nekoliko godina, i obavezno posle bilo kakvih radova u blizini uzemljivača ili ako postoji sumnja da je oštećen, na primer posle iskopa u dvorištu." },
+      { question: "Da li stariji dvožični sistem bez uzemljenja znači da je stan nebezbedan za život?", answer: "Ne automatski, ali znači povećan rizik u odnosu na uzemljenu instalaciju, posebno u kupatilu i kuhinji gde je kontakt sa vodom i metalnim površinama čest. Preporučujemo da se ovo sanira, ne da se ignoriše samo zato što dosad nije bilo problema." },
+    ],
+  },
+  {
+    slug: "led-rasveta-vs-obicne-sijalice-usteda-struje",
+    title: "LED rasveta vs. obične sijalice: uštedite na struji u Nišu",
+    category: "saveti",
+    excerpt:
+      "Razlika u ceni sijalice na polici je mala stavka u odnosu na ono što se potroši i zameni tokom narednih pet godina. Evo orijentacionog poređenja i šta uzeti u obzir pri izboru LED rasvete za dom.",
+    summary:
+      "LED sijalica troši i do osam do deset puta manje struje od klasične sijalice sa vlaknom, uz životni vek koji je desetine puta duži. Na primeru tipične sijalice korišćene nekoliko sati dnevno tokom pet godina, razlika u potrošnji i broju zamena je značajna, mada su tačni iznosi orijentacioni jer zavise od cene struje i navika korišćenja. Uz štednju, LED rasveta otvara i opcije koje klasične sijalice nisu imale, panele, trake, dimovanje i biranje tona svetlosti prema nameni prostorije.",
+    keyTakeaways: [
+      "LED sijalica troši orijentaciono osam do deset puta manje struje od klasične sijalice iste svetlosti",
+      "Životni vek LED sijalice je petnaest do dvadeset pet puta duži od klasične, što znači znatno manje zamena tokom pet godina",
+      "Dimabilna LED sijalica mora biti izričito označena kao takva i uparena sa odgovarajućim dimerom",
+      "Toplo belo (2700-3000K) odgovara dnevnim i spavaćim sobama, hladno belo (4000K i više) radnim prostorijama i garažama",
+      "LED trake i paneli otvaraju opcije osvetljenja koje klasične sijalice fizički nisu mogle da ponude",
+    ],
+    publishedAt: "2026-08-20T09:00:00.000Z",
+    coverImageUrl: "/images/blog/led-rasveta-vs-obicne-sijalice-usteda-struje.webp",
+    body: [
+      p("Pitanje „da li se LED rasveta zaista isplati” dobijam često, obično od klijenata koji gledaju cenu na polici i vide da je LED sijalica skuplja od klasične na prvi pogled. Odgovor postaje jasan tek kad se sagleda perioda od nekoliko godina, ne cena jedne sijalice u jednom trenutku. U nastavku je orijentaciono poređenje i praktični saveti za izbor LED rasvete u domu."),
+      h2("Zašto LED troši manje: osnovna razlika"),
+      p("Klasična sijalica sa vlaknom proizvodi svetlost tako što greje tanku metalnu nit dok ne usija, a najveći deo utrošene energije odlazi u toplotu, ne u svetlost. Halogena sijalica radi na istom principu, uz nešto bolju efikasnost. LED dioda proizvodi svetlost direktno, gotovo bez gubitka na grejanje, zbog čega za istu količinu svetlosti (izraženu u lumenima) troši znatno manje električne energije (izraženu u vatima)."),
+      p("U praksi, LED sijalica od osam do devet vati daje otprilike istu količinu svetlosti kao klasična sijalica od šezdeset vati. To je razlika od gotovo sedam puta u potrošnji za isti efekat u prostoriji."),
+      h2("Poređenje troška na pet godina (orijentaciono)"),
+      p("Sledeći primer je ilustrativan, sa okvirnim brojevima, jer tačna ušteda zavisi od cene struje u vašem tarifnom modelu i od toga koliko sati dnevno sijalica zaista radi. Uzmimo sijalicu koja radi u proseku četiri sata dnevno, što je realno za rasvetu u dnevnoj sobi ili kuhinji, tokom pet godina."),
+      ...bullets([
+        "Klasična sijalica od 60W: pri četiri sata dnevno kroz pet godina, to je otprilike 438 kWh potrošnje, uz sedam do osam zamena sijalice jer prosečan vek klasične sijalice je oko hiljadu sati rada",
+        "LED sijalica od 9W ekvivalentne svetlosti: ista potrošnja vremena daje otprilike 66 kWh, uz jednu, možda nijednu zamenu, jer deklarisan vek LED sijalice je često petnaest do dvadeset pet hiljada sati",
+      ]),
+      p("Razlika u potrošenim kilovat-satima je otprilike 370 kWh tokom pet godina za jednu sijalicu. Kad se to pomnoži orijentacionom cenom struje i doda ušteda na broju kupljenih sijalica, razlika u ukupnom trošku vlasništva je značajna, čak i ako je sama LED sijalica na početku bila nekoliko puta skuplja od klasične. Za stan sa desetak tačaka rasvete koje se redovno koriste, ušteda tokom pet godina lako pokrije i premaši početnu razliku u ceni, plus vreme koje ne trošite na menjanje pregorelih sijalica. Ove brojke tretirajte kao orijentacione, tačan iznos zavisi od vaše tarife i navika korišćenja."),
+      h2("LED paneli i trake: opcije koje klasična rasveta nije imala"),
+      p("LED tehnologija nije ograničena na oblik klasične sijalice u grlu. LED panel, tanka pravougaona ili okrugla ploča ugrađena u spušten plafon, daje ravnomerno, difuzno osvetljenje bez oštrih senki, pogodno za kuhinje, kupatila i radne prostorije. LED traka omogućava indirektno osvetljenje, na primer iznad kuhinjskih elemenata, ispod stepenica ili u niši spuštenog plafona, i zahteva odgovarajući transformator dimenzionisan prema dužini trake i broju dioda po metru, da bi radila stabilno i bez treperenja."),
+      pLink(
+        "Ako planirate rasvetu za celu prostoriju ili kombinaciju panela, traka i spot rasvete, rado predložimo raspored pre nego što se bilo šta kupi, u sklopu naše usluge ",
+        "ugradnje rasvete",
+        "/usluge/rasveta",
+        ".",
+      ),
+      h2("Dimabilne LED sijalice: na šta obratiti pažnju"),
+      p("Ne može se svaka LED sijalica jednostavno staviti na postojeći dimer i očekivati da radi ispravno. Dimer projektovan za klasične sijalice sa vlaknom radi na principu koji nije uvek kompatibilan sa elektronikom unutar LED sijalice, što se u praksi ispoljava kao treperenje, zujanje ili sijalica koja se ne gasi do kraja nego samo zatamni. Rešenje je dvostruko: kupiti sijalicu izričito označenu kao „dimabilna” (dimmable), i uz nju dimer koji proizvođač deklariše kao kompatibilan sa LED opterećenjem. Ako imate stariji dimer iz perioda kad je kuća opremana klasičnim sijalicama, vredi proveriti kompatibilnost pre kupovine LED sijalica, ili unapred planirati zamenu dimera kao deo istog posla."),
+      h2("Boja svetlosti: toplo belo, neutralno i hladno belo"),
+      p("Boja svetlosti se izražava u stepenima Kelvina (K), i za razliku od naziva, ne opisuje temperaturu sijalice, nego ton svetlosti koji proizvodi. Niža vrednost daje topliju, žućkastu svetlost, viša vrednost daje hladniju, plavičastu svetlost. Praktičan vodič za biranje po prostoriji:"),
+      ...bullets([
+        "2700 do 3000K, toplo belo: dnevna soba, spavaća soba, trpezarija, prostori gde se želi opušten, prijatniji ambijent uveče",
+        "3500 do 4000K, neutralno belo: kuhinja, kupatilo, radna soba, prostori gde je bitna jasnoća bez previše „hladnog” utiska",
+        "5000 do 6500K, hladno belo: garaža, radionica, ostava, spoljašnja rasveta gde je prioritet maksimalna vidljivost, ne ugodnost boravka",
+      ]),
+      p("Česta greška je kupovina sijalica različitog tona za istu prostoriju u različitim trenucima, na primer jedna toplo bela i jedna neutralna u istom plafonjeru, što se odmah primeti golim okom kao neujednačeno osvetljenje. Vredi zapisati ili zapamtiti oznaku Kelvina sa kutije prve kupljene sijalice za svaku prostoriju, radi lakšeg usklađivanja pri budućim dopunama ili zamenama."),
+      h2("Praktičan savet pri kupovini"),
+      p("Pri izboru LED sijalice, gledajte deklarisane lumene, ne vate, jer lumeni pokazuju stvarnu količinu svetlosti, dok su vati kod LED tehnologije mnogo manje pouzdan pokazatelj jačine nego što su bili kod klasičnih sijalica. Takođe je korisno proveriti indeks reprodukcije boje (CRI), gde viša vrednost, blizu 90 ili više, znači vernije prikazivanje boja predmeta u prostoriji, što je posebno bitno u kuhinji i kupatilu gde se boje hrane i lica menjaju pod lošom rasvetom."),
+    ],
+    faq: [
+      { question: "Da li LED sijalice zaista traju toliko dugo koliko piše na kutiji?", answer: "Deklarisani vek je laboratorijska procena pod standardnim uslovima, pa se u praksi može malo razlikovati, ali LED sijalice od poznatih proizvođača u velikoj većini slučajeva zaista traju znatno duže od klasičnih, po pravilu deset i više godina uobičajene upotrebe." },
+      { question: "Zašto mi LED sijalica treperi na starom dimeru?", answer: "Najčešće zato što dimer nije projektovan za LED opterećenje. Rešenje je zamena dimera modelom koji proizvođač deklariše kao kompatibilan sa LED sijalicama, uz sijalicu koja je takođe označena kao dimabilna." },
+      { question: "Koju boju svetlosti da izaberem ako nisam siguran?", answer: "Za većinu stambenih prostorija, osim radnih površina, neutralno do toplo belo (3000 do 3500K) je siguran, univerzalan izbor koji ne deluje ni previše žuto ni previše hladno." },
+      { question: "Da li LED rasveta zahteva poseban transformator?", answer: "LED trake i pojedini niskonaponski sistemi zahtevaju transformator, dimenzionisan prema ukupnoj snazi priključenih dioda. Standardne LED sijalice sa običnim grlom rade direktno na mrežni napon i ne zahtevaju dodatnu opremu." },
+      { question: "Da li se isplati odjednom zameniti sve sijalice u stanu za LED?", answer: "U većini slučajeva da, jer se ušteda i smanjen broj zamena akumuliraju od prvog dana, a ne morate da čekate da klasične sijalice pregore jedna po jedna. Ako je budžet ograničen, ima smisla početi od tačaka koje najduže rade dnevno, jer tu je ušteda najbrža." },
     ],
   },
 ];
