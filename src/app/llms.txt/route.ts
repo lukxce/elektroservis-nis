@@ -1,7 +1,9 @@
 import { getSiteSettings, getServicePages, getBlogPosts } from "@/lib/data";
 import { SITE_URL } from "@/lib/site-config";
 
-export const revalidate = 60;
+// Statičko dok webhook ne pozove revalidateTag() — nema fiksnog tajmera
+// da ne bismo trošili ISR write-ove bez stvarne izmene u Sanityju.
+export const revalidate = false;
 
 export async function GET() {
   const [settings, servicePages, posts] = await Promise.all([
