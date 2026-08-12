@@ -9,6 +9,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  headers: async () => [
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "elektroservis-nis.vercel.app" }],
+      headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+    },
+  ],
 };
 
 export default nextConfig;
