@@ -9,10 +9,10 @@ import { SITE_URL } from "@/lib/site-config";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getSiteSettings();
-  const title = settings.seoBlog?.title ?? `Blog o električnim instalacijama | ${settings.city}`;
+  const title = settings.seoBlog?.title ?? `Blog o električnim instalacijama i bezbednosti u kući`;
   const description =
     settings.seoBlog?.description ??
-    `Korisni tekstovi o bezbednosti, održavanju i renoviranju električnih instalacija u ${settings.city}u.`;
+    `Praktični tekstovi o instalacijama: kada se menja razvodna tabla, zašto iskaču osigurači i kako bezbedno isplanirati renoviranje.`;
 
   return {
     title,
